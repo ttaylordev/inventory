@@ -4,6 +4,7 @@ angular.module( 'thisApp' )
         location: 'Provo',
         name: 'Brack',
         time: new Date(),
+        details: "",
         parts: [ {
           name: 'part #1'
         }, {
@@ -34,6 +35,7 @@ angular.module( 'thisApp' )
         location: 'Orem',
         name: 'Sam',
         time: "8:00a",
+        details: "",
         parts: [ {
           name: 'Asst objects'
         }, {
@@ -44,6 +46,7 @@ angular.module( 'thisApp' )
         location: 'American Fork',
         name: 'Emily',
         time: "1:00p",
+        details: "",
         parts: [ {
           name: 'purple cups'
         }, {
