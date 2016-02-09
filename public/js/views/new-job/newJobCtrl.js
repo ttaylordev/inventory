@@ -1,6 +1,7 @@
 angular.module( 'thisApp' )
   .controller( 'newJobCtrl', [ '$scope', '$location', '$stateParams', function ( $scope, $location, $stateParams, ModalService ) {
-    console.log( "weiner" );
+    console.log( 'newJobCtrl is logging within' );
+
     $scope.newJob = {
       firstName: "",
       lastName: "",
@@ -9,7 +10,7 @@ angular.module( 'thisApp' )
     }
 
     $scope.closeModal = function () {
-      $location.path( '/job-list' );
+      $location.path( '/joblist' );
     }
 
     $scope.saveNewJob = function () {

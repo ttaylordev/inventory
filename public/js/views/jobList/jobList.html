@@ -1,7 +1,7 @@
 <div ng-repeat="job in jobs | orderBy : 'time' : true" class="jobList">
   <div class="jobWrapper">
-      <div class="jobLeftSideInfo">{{job.time | date : 'shortTime'}}</div>
-      <!-- // save the time as a date object, it will convert it into a date string-->
+    <div class="jobLeftSideInfo">{{job.time | date : 'shortTime'}}</div>
+    <!-- // save the time as a date object, it will convert it into a date string-->
 
     <div ng-click="job.selected = !job.selected" class="detailsButton">
       <span>{{job.name}}</span>
@@ -18,6 +18,5 @@
     </div>
   </div>
 </div>
-<button id="addJobBtn" ng-click="addJob();" >Add Job</button>
-<div ui-view class="addJobModal" ></div>
-<!-- <div ui-view="newJobModal" class="addJobModal" ></div> -->
+<button id="addJobBtn" ng-click="addJob();">Add Job</button>
+<div ui-view class="addJobModal"></div>

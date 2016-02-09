@@ -14,8 +14,6 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/tysonTaylor/inventorymerx#readme",
   "dependencies": {
-    "angular-modal-service": "^0.6.9",
-    "angular-ui-router": "^0.2.18",
-    "ui-router": "^0.2.15"
+
   }
 }

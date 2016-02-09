@@ -22,7 +22,7 @@
         <label for="detail">Details about Job</label>
         <textarea rows="4" cols="30" name="detail" ng-model="newJob.detail" value="" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
       </div>
-      <button ng-click="saveNewJob()">Save New Job</button>
+      <button ng-click="saveNewJob(); closeModal();">Save New Job</button>
       </div>
     </div>
   </div>

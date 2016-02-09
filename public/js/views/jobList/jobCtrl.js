@@ -1,27 +1,15 @@
 angular.module( 'thisApp' )
   .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', function ( $scope, $location, mainSvc, ModalService ) {
     $scope.addJob = function () {
-      $location.path( '/job-list/new-job' );
-      var stuff = 0;
-    }
-
+        $location.path( '/job-list/newJob' );
+        var stuff = 0;
+      }
+      // dummy data
     $scope.jobs = [ {
         location: 'Provo',
         name: 'Brack',
         time: new Date(),
         parts: [ {
-          name: 'part #1'
-        }, {
-          name: 'part #2'
-        }, {
-          name: 'part #1'
-        }, {
-          name: 'part #2'
-        }, {
-          name: 'part #1'
-        }, {
-          name: 'part #2'
-        }, {
           name: 'part #1'
         }, {
           name: 'part #2'
