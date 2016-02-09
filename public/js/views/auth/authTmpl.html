@@ -1,0 +1,16 @@
+<body>
+  <div class="authAndRegWindow">
+    <form id='authForm'>
+      <div class="authSectionTop">
+        <input class="authInputs" required type="email" ng-model="user.email" name="name" placeholder="Enter email" value="">
+        <br>
+        <br>
+        <input class="authInputs" required type="password" ng-model="user.password" name="name" placeholder="Enter password" value="">
+      </div>
+      <br>
+      <div class="authButtons">
+        <button class="buttons" ng-click="login(user)" type="submit">Login</button>
+        <button class="buttons" ng-click="register(user)">Sign-up</button>
+      </div>
+    </form>
+  </div>
