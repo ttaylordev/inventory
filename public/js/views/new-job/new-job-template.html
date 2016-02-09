@@ -1,0 +1,28 @@
+<div id="addNewJobModal" class="modal">
+  <div class="modalBackground"></div>
+  <div class="modalTable">
+    <div class="modalCell">
+      <div class="modalHeaderBar">
+        <div class="modalTitle">Add New Job</div>
+        <div class="closeModal" ng-click="closeModal();">X</div>
+      </div>
+      <div>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" ng-model="newJob.firstName" value="" placeholder="First Name">
+      </div>
+      <div>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" ng-model="newJob.lastName" value="" placeholder="Last Name">
+      </div>
+      <div>
+        <label for="address">Job Location</label>
+        <input type="text" name="address" ng-model="newJob.address" value="" placeholder="Address">
+      </div>
+      <div>
+        <label for="detail">Details about Job</label>
+        <textarea rows="4" cols="30" name="detail" ng-model="newJob.detail" value="" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
+      </div>
+      <button ng-click="saveNewJob()">Save New Job</button>
+      </div>
+    </div>
+  </div>

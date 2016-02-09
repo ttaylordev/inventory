@@ -1,5 +1,10 @@
 angular.module( 'thisApp' )
-  .controller( 'jobCtrl', function ( mainSvc, $scope, ModalService ) {
+  .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', function ( $scope, $location, mainSvc, ModalService ) {
+    $scope.addJob = function () {
+      $location.path( '/job-list/new-job' );
+      var stuff = 0;
+    }
+
     $scope.jobs = [ {
         location: 'Provo',
         name: 'Brack',
@@ -50,7 +55,7 @@ angular.module( 'thisApp' )
           name: '3/4" hose'
         } ]
       } ]
-  } );
+  } ] );
 
 
 //date filter that filters it into a time format
