@@ -1,7 +1,7 @@
 angular.module( 'thisApp' )
   .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', function ( $scope, $location, mainSvc, ModalService ) {
     $scope.addJob = function () {
-        $location.path( '/job-list/newJob' );
+        $location.path( '/joblist/newJob' );
         var stuff = 0;
       }
       // dummy data

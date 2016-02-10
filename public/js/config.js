@@ -1,5 +1,6 @@
 angular.module( 'thisApp' )
   .config( function ( $stateProvider, $urlRouterProvider ) {
+    console.log( 'config is logging within' );
     $urlRouterProvider.otherwise( '/joblist' );
     console.log( 'config is logging within' );
 
@@ -21,7 +22,7 @@ angular.module( 'thisApp' )
       templateUrl: './js/views/auth/authTmpl.html',
       controller: 'authCtrl'
 
-    }
+    };
     $stateProvider
       .state( jobListState )
       .state( newJobModalState );
