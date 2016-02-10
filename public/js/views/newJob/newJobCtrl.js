@@ -1,5 +1,5 @@
 angular.module( 'thisApp' )
-  .controller( 'newJobCtrl', [ '$scope', '$location', '$stateParams', function ( $scope, $location, $stateParams, ModalService ) {
+  .controller( 'newJobCtrl', [ '$scope', '$location', '$stateParams', function ( $scope, $location, $stateParams ) {
     console.log( 'newJobCtrl is logging' );
     $scope.newJob = {
       firstName: "",

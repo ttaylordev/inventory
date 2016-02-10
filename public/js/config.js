@@ -1,30 +1,31 @@
 angular.module( 'thisApp' )
   .config( function ( $stateProvider, $urlRouterProvider ) {
-    console.log( 'config is logging within' );
-    $urlRouterProvider.otherwise( '/joblist' );
-    console.log( 'config is logging within' );
+    $urlRouterProvider.otherwise( '/jobList' );
 
     var jobListState = {
       name: 'jobList',
-      url: '/joblist',
-      templateUrl: './js/views/joblist/joblist.html',
+      url: '/jobList',
+      templateUrl: './js/views/joblist/jobList.html',
       controller: 'jobCtrl'
     };
     var newJobModalState = {
       name: 'jobList.newJobModal',
       url: '/newJob',
-      templateUrl: './js/views/newJob/newJobtemplate.html',
+      templateUrl: './js/views/newJob/newJobTemplate.html',
       controller: 'newJobCtrl'
     };
-    var authState = {
-      name: '',
-      url: '/authentication',
-      templateUrl: './js/views/auth/authTmpl.html',
-      controller: 'authCtrl'
+    // var authState = {
+    //   name: '',
+    //   url: '/authentication',
+    //   templateUrl: './js/views/auth/authTmpl.html',
+    //   controller: 'authCtrl'
+    //
+    // };
 
-    };
     $stateProvider
       .state( jobListState )
-      .state( newJobModalState );
+      .state( newJobModalState )
+      // .state( authState );
+
 
   } );
