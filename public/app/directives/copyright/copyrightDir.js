@@ -1,4 +1,4 @@
-angular.module( 'thisApp' )
+angular.module( 'inventoryApp' )
   .directive( 'copyrightDir', function() {
     return {
       restrict: 'E',

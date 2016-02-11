@@ -1,4 +1,4 @@
-angular.module( 'thisApp' )
+angular.module( 'inventoryApp' )
   .service( 'copyrightSvc', function () {
 
     this.testCopyrightSvc = function () {

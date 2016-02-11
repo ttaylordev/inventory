@@ -1,4 +1,4 @@
-angular.module( 'thisApp' )
+angular.module( 'inventoryApp' )
   .controller( 'mainCtrl', function ( $state, mainSvc, $scope, ModalService ) {
     // $scope.openLoginModal = function () {
     //   ModalService.showModal( {

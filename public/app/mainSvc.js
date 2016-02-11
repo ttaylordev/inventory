@@ -1,2 +1,2 @@
-angular.module( 'thisApp' )
+angular.module( 'inventoryApp' )
   .service( 'mainSvc', function () {} );

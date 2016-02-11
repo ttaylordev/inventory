@@ -1,4 +1,4 @@
-angular.module( 'thisApp' )
+angular.module( 'inventoryApp' )
   .controller( 'newJobCtrl', [ '$scope', '$location', '$stateParams', function ( $scope, $location, $stateParams ) {
     console.log( 'newJobCtrl is logging' );
     $scope.newJob = {

@@ -5,11 +5,19 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #2c3a40;
+}
+
+#landingBackground {
+  background-image: image('/');
+}
+
 #ColorPalletteOfficial {
   color: #d9593d;
   color: #f2c029;
   color: #b8d9d5;
-  color: #2c3a40;
+  color: rgb(44, 58, 64);
   color: #f2f2f2;
 }
 
@@ -20,10 +28,67 @@
   color: black;
   color: gray;
   color: #e9e2e7;
+  color: rgb(32, 31, 34);
 }
 
-body {
-  background-color: rgb(200, 192, 167);
+#buttonLine {
+  height: 50px;
+  width: 100%;
+}
+
+#headerTmplWrapper {
+  display: flex;
+}
+
+#hamburgerWrapper {
+flex: 1;
+}
+
+#hamburger {
+  padding-left: 1.25em;
+  position: relative;
+}
+
+#hamburger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.21em;
+  bottom: 0.21em;
+  width: 1em;
+  background: linear-gradient( to bottom, mintcream, mintcream 20%, rgb(44, 58, 64) 20%, rgb(44, 58, 64) 40%, mintcream 40%, mintcream 60%, rgb(44, 58, 64) 60%, rgb(44, 58, 64) 80%, mintcream 80%, mintcream 100%);
+}
+
+#currentView {
+  flex-grow: 1;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  color: mintcream;
+
+}
+
+alert-dir{
+  width: 1.25em;
+  background-color: purple;
+}
+.navMenuWrapper {
+  display: flex;
+  position: fixed;
+  margin-top: 19px;
+  width: 100vw;
+  height: 8vh;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: mintcream;
+}
+
+#navMenuSelection {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .jobWrapper {
@@ -32,25 +97,47 @@ body {
 }
 
 .jobLeftSideInfo {
-  width: 80%;
-  height: 2em;
+  flex: 1.8;
+  font-size: 0.8em;
+  color: mintcream;
+  background-color: rgb(61, 41, 35);
+  background-color:rgb(32, 31, 34);
 }
 
 .jobRightSideInfo {
-  width: 80%;
-  height: 2em;
+  flex: 1.8;
+  font-size: 0.8em;
   text-align: right;
+  background-color: rgb(61, 41, 35);
+  background-color:rgb(32, 31, 34);
+
+  color: mintcream;
 }
 
 .selectedJob {
   background-color: rgb(185, 216, 226);
 }
 
-.detailsButton {
-  width: 100%;
+.details {
+  flex: 6.4;
   font-size: 2em;
+  color: mintcream;
   text-align: center;
   position: relative;
+  background-color: rgb(61, 41, 35);
+  background-color:rgb(32, 31, 34);
+
+
+}
+
+#addJobBtn {
+  padding: 0 50% 0 50%;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  color: mintcream;
+  background-color: rgb(32, 31, 34);
 }
 
 #addNewJobModal {

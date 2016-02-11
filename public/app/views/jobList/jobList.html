@@ -2,8 +2,8 @@
   <div class="jobWrapper">
     <div class="jobLeftSideInfo">{{job.time | date : 'shortTime'}}</div>
     <!-- // save the time as a date object, it will convert it into a date string-->
-    
-    <div ng-click="job.selected = !job.selected" class="detailsButton">
+
+    <div ng-click="job.selected = !job.selected" class="details">
       <span>{{job.name}}</span>
     </div>
     <div class="jobRightSideInfo">{{job.location}}</div>
@@ -18,5 +18,5 @@
     </div>
   </div>
 </div>
-<button id="addJobBtn" ng-click="addJob();">Add Job</button>
-<div ui-view class="addJobModal"></div>
+<span type="button" id="addJobBtn" ui-sref="jobList.newJobModal">+</span>
+<ui-view></ui-view>
