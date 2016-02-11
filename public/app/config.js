@@ -14,12 +14,6 @@ angular.module( 'inventoryApp' )
       templateUrl: './app/views/newJob/newJobTemplate.html',
       controller: 'newJobCtrl'
     };
-    var authState = {
-      name: 'auth',
-      url: '/auth',
-      templateUrl: './app/views/auth/authTmpl.html',
-      controller: 'authCtrl'
-    };
     var landingState = {
       name: 'landing',
       url: '/landing',
@@ -39,13 +33,12 @@ angular.module( 'inventoryApp' )
       controller: 'poCtrl'
     };
 
-
+    //resolve that checks for auth true, if not, takes you back ot landing page
 
 
     $stateProvider
       .state( jobListState )
       .state( newJobModalState )
-      .state( authState )
       .state( workOrderState )
       .state( purchaseOrderState )
       .state( landingState );
