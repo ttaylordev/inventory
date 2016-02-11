@@ -35,8 +35,8 @@ angular.module( 'inventoryApp' )
     var purchaseOrderState = {
       name: 'purchaseOrder',
       url: '/purchaseOrder',
-      templateUrl: './app/views/purchaseOrder/purchaseOrderTmpl.html',
-      controller: 'purchaseOrderCtrl'
+      templateUrl: './app/views/purchaseOrder/poTmpl.html',
+      controller: 'poCtrl'
     };
 
 

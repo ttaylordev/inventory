@@ -38,6 +38,7 @@ body {
 
 #headerTmplWrapper {
   display: flex;
+  outline: 1px solid black;
 }
 
 #hamburgerWrapper {
@@ -200,4 +201,34 @@ alert-dir{
   width: 100%;
 }
 
-.yourMom {}
+.customerForm{
+  color: mintcream;
+}
+
+.customerInput {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.woForm{
+  color: mintcream;
+}
+
+.woInput {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 70vw;
+}
+
+.woTextArea {
+
+}
+
+#miniLogo {
+  float: right;
+  margin-right: 2px;
+  width: 28vw;
+  max-width: 70px;
+  max-height: 70px;
+
+}
