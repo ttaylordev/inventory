@@ -8,6 +8,7 @@ angular.module( 'inventoryApp' )
         location: 'Provo',
         name: 'Brack',
         time: new Date(),
+        details: "",
         parts: [ {
           name: 'part #1'
         }, {
@@ -26,6 +27,7 @@ angular.module( 'inventoryApp' )
         location: 'Orem',
         name: 'Sam',
         time: "8:00a",
+        details: "",
         parts: [ {
           name: 'Asst objects'
         }, {
@@ -36,6 +38,7 @@ angular.module( 'inventoryApp' )
         location: 'American Fork',
         name: 'Emily',
         time: "1:00p",
+        details: "",
         parts: [ {
           name: 'purple cups'
         }, {
