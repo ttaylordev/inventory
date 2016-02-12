@@ -9,8 +9,8 @@ angular.module( 'inventoryApp' )
       controller: 'jobCtrl'
     };
     var newJobModalState = {
-      name: 'jobList.newJobModal',
-      url: '/newJob',
+      name: 'jobList.newJobModal', // displaying on top bar as joblist.newJobModal
+      url: '/newJob', // being called as jobList/newJob
       templateUrl: './app/views/newJob/newJobTemplate.html',
       controller: 'newJobCtrl'
     };
@@ -33,8 +33,9 @@ angular.module( 'inventoryApp' )
       controller: 'poCtrl'
     };
 
-    //resolve that checks for auth true, if not, takes you back ot landing page
-
+    // resolve that checks for auth true, if not, takes you back ot landing page
+    // specify the url in the routing, so that we can shortcut while typing in the url.
+    // it gives it a way to parse the url and direct it to where it ought to go.
 
     $stateProvider
       .state( jobListState )

@@ -1,4 +1,4 @@
-angular.module( "inventoryApp" ).controller( "workOrderCtrl", function ( $scope ) {
+angular.module( "inventoryApp" ).controller( "workOrderCtrl", function ( $scope, $state ) {
   $scope.state = $state;
   $scope.test = "this is a test";
   console.log( 'logging from within workOrderCtrl' );

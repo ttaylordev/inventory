@@ -1,9 +1,14 @@
 testing from customerDisp.html
-<form class="" action="index.html" method="post">
+<div class="customerDispWrapper">
   <img src="./public/media/miniLogo.png"/>
-  <input type="text" name="firstName" value="" placeholder="firstName">
-  <input type="text" name="lastName" value="" placeholder="lastName">
-  <input type="text" name="address" value="" placeholder="address">
+  {{mainSvc.customer.firstName}}
+  {{mainSvc.customer.lastName}}
+  {{mainSvc.customer.address}}
+  {{mainSvc.customer.email}}
+  {{mainSvc.customer.warrantyStatus}}
+  {{mainSvc.customer.balance}}
+</div>
+
   <!-- Inputs -->
   <!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
 
@@ -11,5 +16,3 @@ testing from customerDisp.html
   <!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
   <!-- TODO: attach current user as the technician name -->
   <!-- TODO: itemized charges NOTE: should allow editing for certain users-->
-
-</form>

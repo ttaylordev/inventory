@@ -1,4 +1,7 @@
 <div class="navMenuWrapper">
-  <span ng-repeat="menuItem in menuItems" id="navMenuSelection"> {{menuItem.display}} <span>
+  <span ui-sref="{{menuItem.route}}" ng-repeat="menuItem in menuItems" id="navMenuSelection"> {{menuItem.display}} <span>
 
 </div>
+
+
+<!-- NOTE: menuItem.route-->

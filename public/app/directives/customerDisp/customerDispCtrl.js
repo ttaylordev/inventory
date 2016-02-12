@@ -1,3 +1,3 @@
-angular.module( "inventoryApp" ).controller( "customerCtrl", function ( $scope, $state ) {
+angular.module( "inventoryApp" ).controller( "customerDispCtrl", function ( $scope, $state ) {
 
 } );
