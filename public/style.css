@@ -46,7 +46,7 @@ body {
 }
 
 #hamburgerWrapper {
-flex: 1;
+  flex: 1;
 }
 
 #hamburger {
@@ -70,13 +70,13 @@ flex: 1;
   font-weight: bold;
   text-align: center;
   color: mintcream;
-
 }
 
-alert-dir{
+alert-dir {
   width: 1.25em;
   background-color: purple;
 }
+
 .navMenuWrapper {
   display: flex;
   position: fixed;
@@ -106,7 +106,7 @@ alert-dir{
   font-size: 0.8em;
   color: mintcream;
   background-color: rgb(61, 41, 35);
-  background-color:rgb(32, 31, 34);
+  background-color: rgb(32, 31, 34);
 }
 
 .jobRightSideInfo {
@@ -114,8 +114,7 @@ alert-dir{
   font-size: 0.8em;
   text-align: right;
   background-color: rgb(61, 41, 35);
-  background-color:rgb(32, 31, 34);
-
+  background-color: rgb(32, 31, 34);
   color: mintcream;
 }
 
@@ -130,9 +129,7 @@ alert-dir{
   text-align: center;
   position: relative;
   background-color: rgb(61, 41, 35);
-  background-color:rgb(32, 31, 34);
-
-
+  background-color: rgb(32, 31, 34);
 }
 
 #addJobBtn {
@@ -194,7 +191,10 @@ alert-dir{
   opacity: 1;
   z-index: 101;
 }
+
+
 /*ModalCommons*/
+
 .modalCell {
   display: table-cell;
   padding: 0 0 10px 0;
@@ -205,7 +205,7 @@ alert-dir{
   width: 100%;
 }
 
-.customerForm{
+.customerForm {
   color: mintcream;
 }
 
@@ -214,14 +214,16 @@ alert-dir{
   margin-bottom: 2px;
 }
 
+
 /*CustomerDisplayDirective*/
-.customerDispWrapper{
+
+.customerDispWrapper {
   margin: auto;
   padding: 20px;
   background-color: purple;
 }
 
-.woForm{
+.woForm {
   color: mintcream;
 }
 
@@ -231,9 +233,7 @@ alert-dir{
   width: 70vw;
 }
 
-.woTextArea {
-
-}
+.woTextArea {}
 
 #miniLogo {
   float: right;
@@ -241,11 +241,11 @@ alert-dir{
   width: 28vw;
   max-width: 70px;
   max-height: 70px;
-
 }
 
 
 /*Modal*/
+
 .overlay {
   color: black;
   position: fixed;
@@ -259,6 +259,7 @@ alert-dir{
   border-radius: 2px;
   border: 1px solid #C0C3C5;
 }
+
 .fade {
   position: fixed;
   left: 0%;

@@ -31,8 +31,12 @@
       locations
       vehicles
 <!-- TODO: front end endpoints -->
+<!-- TODO: build mainSvc to full functionality, and Controllers on the back end to handle requests for each Schema -->
+<!-- TODO:  -->
 <!-- create a model,   -->
-<!-- load em' all and use a .then to filter what I need from the object -->
+<!-- within the service, format object to send the query as a string to the URL, might find a library to do this. -->
+<!-- TODO:  -->
+
 
 
 
@@ -62,8 +66,10 @@
           itemsRequested: [{
             itemName:"byID..." -require at least one.
           },]
-
         }
+    @navMenuBar
+      add on click out and on click item in menu, collapsability
+
   ***Angular***
     **Views**
     **Modals**
@@ -93,11 +99,18 @@
       How do I recieve data from service??? and place it on customerDisp.html
         within the controller, do a .then, and in that .then I'll assign the information.
 
-###Mvp mini
+### Mvp-mini
 
   ***First***
-    dummy data
+    visual stuff, even if it's dummy data clientside for now.
+
+    queries
+      build schemas, so they poplate the DB
+      search by name only
+        or get the entire object
+          ng-option on
     get the object, display it
+    dummy data
 
 
 

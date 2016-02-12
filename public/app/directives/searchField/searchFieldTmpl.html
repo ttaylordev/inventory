@@ -1,0 +1,12 @@
+<div ng-controller="searchFieldCtrl">
+  <select ng-options="thing as thing.label for thing in things track by thing.id" ng-model="selected"></select>
+  <!-- <span ui-sref="{{things.label}}"></span> -->
+  <div style="width:200px; height: 200px; background-color:purple;">
+    {{things.id}}
+    {{things.id[0]}}
+    {{things.id[1]}}
+    {{things.id}}
+    what the hell?
+    {{things.subItem.name}}
+  </div>
+</div>

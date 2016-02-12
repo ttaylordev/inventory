@@ -5,7 +5,7 @@ var ObjectId = mongoose.Schema.Types.ObjectId; // mongoose has a schema,  a Type
 
 // how do I create unique keys for
 // every time I put something into a collection I get an "_id"
-//  __v in mongo or mongoose, and It might have to do withpriority
+// __v in mongo or mongoose, and It might have to do withpriority
 // the double underscore thingy is like JQ's $, it lets the reader know that it is a mongo thing, they are trying to namescape it away so it's less likely to interfere with what someone wants.
 
 // Schemas are specific to mongoose
