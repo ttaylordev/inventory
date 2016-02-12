@@ -1,6 +1,6 @@
 angular.module( 'inventoryApp' )
   .controller( 'authCtrl', function ( $scope, $location, mainSvc, close, key ) {
-    console.log( 'authCtrl is logging inside' );
+
     $scope.testauthCtrl = 'authCtrl is working';
     $scope.close = close;
     $scope.key = key;

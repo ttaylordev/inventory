@@ -1,7 +1,9 @@
 angular.module( 'inventoryApp' )
   .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', function ( $scope, $location, mainSvc ) {
-    console.log( 'jobCtrl is logging' );
+
+    // coming from 
     // dummy data
+    // TODO: must be replaced with a call from the server
     $scope.jobs = [ {
         location: 'Provo',
         name: 'Brack',

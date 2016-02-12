@@ -61,6 +61,6 @@ var VehicleSchema = new mongoose.Schema( {
     type: Date,
   }
 
-
+  //TODO: name of vehicle
 } );
 module.exports = LocSchema;

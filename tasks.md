@@ -1,7 +1,43 @@
+###Included
+  joblist
+  addNewJob
+  landing
+  purchaseOrder
+  workOrder
+  menubar
+
+###To add
+  inventorySummary
+    swaps Modal
+  alertsView
+  locationsModal
+    selects what is to be displayed in each pane....
+      eachPane: inventory, swapModal,
+  display
+    items
+    vehicles
+  adminPanel
+    display
+      users
+      items
+    notifications
+      lowStock
+        frequentlyUsed
+        flaggedItems
+      vehicles
+    CRUD  functionality
+      users
+      items
+      locations
+      vehicles
+<!-- TODO: front end endpoints -->
+<!-- create a model,   -->
+<!-- load em' all and use a .then to filter what I need from the object -->
+
 
 
 ###Front
-  ***Scratch***
+  ***FromScratch***
     **InventoryDisp**
       route, view etc
     **locationSwitchModal**
@@ -15,7 +51,19 @@
       style logo position -- might need wrappers
     @alert
       style it
+  ***HTML***
+    @purchaseOrder
+      add a submit button
+        link it through the controller -> service -> server -> database --> then back through .then's
+      take CustomerDir out of purchaseOrder
+        populate it with: {
+          user: "", -require
+          location/vehicle: "", -require
+          itemsRequested: [{
+            itemName:"byID..." -require at least one.
+          },]
 
+        }
   ***Angular***
     **Views**
     **Modals**
@@ -33,6 +81,10 @@
 
   ***Controllers***
    @Mentor:
+
+
+
+      ***Later***
       redirect if not authed (I can reference noServerProject)
 
       >routing for navMenu.
@@ -42,8 +94,16 @@
         within the controller, do a .then, and in that .then I'll assign the information.
 
 ###Mvp mini
-  dummy data
-  get the object, display it
+
+  ***First***
+    dummy data
+    get the object, display it
+
+
+
+  ***Last***
+    get Auth working: use passport, through authSvc
+      if(auth) --use noServerProject as a reference.
 
 
 ### FutureFeatures

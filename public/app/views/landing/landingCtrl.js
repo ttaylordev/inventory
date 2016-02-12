@@ -1,10 +1,9 @@
 angular.module( 'inventoryApp' )
   .controller( 'landingCtrl', function ( $scope, mainSvc, ModalService ) {
-    console.log( 'landingCtrl is logging inside' );
-    $scope.testlandingCtrl = 'landingCtrl is working';
+
     $scope.openLoginModal = function () {
       ModalService.showModal( {
-          templateUrl: "./app/views/auth/authTmpl.html", // points to the URL of the view
+          templateUrl: "./app/modals/auth/authTmpl.html", // points to the URL of the view
           controller: "authCtrl",
           inputs: {
             key: 'user'
@@ -15,11 +14,8 @@ angular.module( 'inventoryApp' )
           //function that runs when modal closes
           modal.close.then( function ( then ) { // then will equal whatever happened to close
             $scope.confirmationAnswer = then;
-            console.log( then );
+            console.log( then ); // logs user to the console
           } );
         } );
     }
-
-
   } );
-console.log( 'landing service is logging from outside' );
