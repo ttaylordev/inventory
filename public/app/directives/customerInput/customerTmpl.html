@@ -1,23 +1,28 @@
 <div id="customerTmplWrap">
+      <!-- select Customer button -->
   <button ng-hide="selectCustomer" ng-click="selectCustomer = !selectCustomer;addNewCustomer=false" type="button" name="button">Select Customer</button>
-  <select ng-show="selectCustomer" ng-options="customer.firstName for customer in customers" ng-model="selectedCustomer" ng-change = "addNewCustomer=false" type="select" name="select" placeholder="Select Customer">
+
+      <!-- dropdown of customers -->
+  <select ng-show="selectCustomer" ng-options="customer.firstName for customer in customers" ng-model="selectedCustomer" ng-change="addNewCustomer=false">
     <option value="">Select Customer</option>
   </select>
-  <button ng-click="addNewCustomer = !addNewCustomer; selectedCustomer = ''" type="button" name="button">Add New Customer</button>
-  <customer-disp-dir ng-show="selectedCustomer" customer="selectedCustomer"></customer-disp-dir>
 
-  <form ng-hide="selectCustomer" ng-show="addNewCustomer" class="customerForm">
+      <!-- Add Customer button -->
+  <button ng-click="addNewCustomer = !addNewCustomer; selectedCustomer = ''" id="addCustBtn" type="button" name="button">Add New Customer</button>
+
+      <!-- customer field data directive -->
+  <customer-disp-dir ng-show="selectedCustomer" ng-show=""  customer="selectedCustomer"></customer-disp-dir>
+
+      <!-- customer # display -->
+  <!-- <form class="customerForm">
     <div class="customerTopBlock">
       <div class="numberWraper">Customer#:
-        <span id="orderNumber">{{customer._id}}</span>
-      </div>
-      <div class=numberWraper>{{state.current.name | lowercase}}
-        <span id="orderNumber">#:{{workOrders._id}}</span>
+        <span id="orderNumber" ng-model="selectedCustomer.customerId">{{selectedCustomer.customerId}}</span>
       </div>
     </div>
-  </form>
+  </form> -->
 
-  <form ng-submit="createCustomer(customer)" ng-show="addNewCustomer"  class="customerForm">
+  <form ng-submit="createCustomer(customer)" ng-show="addNewCustomer" class="customerForm">
 
     <div class="customerBotBlock">
       <div class="customerRightWrapper">
@@ -31,7 +36,7 @@
           No<input class="radio" name="warranty" type="radio" value="no" name="warrantyNo">
         </div>
       </div>
-      <div id="customerLeftBlock">
+      <div class="customerLeftBlock">
         <!-- ng-model boject notation -->
         <input ng-model="customer.firstName" class="customerInput" type="text" name="firstName" value="" placeholder="First Name">
         <input ng-model="customer.lastName" class="customerInput" type="text" name="lastName" value="" placeholder="Last Name">
@@ -41,7 +46,7 @@
         <input ng-model="customer.zip" class="customerInput" type="text" name="zip" value="" placeholder="Zip">
         <input ng-model="customer.city" class="customerInput" type="text" name="city" value="" placeholder="City">
         <input ng-model="customer.state" class="customerInput" type="text" name="state" value="" placeholder="State">
-        <button type="submit" name="button">Submit</button>
+        <button type="submit" ng-click="" name="button">Submit</button>
       </div>
     </div>
   </form>

@@ -1,9 +1,14 @@
 angular.module( 'inventoryApp' )
-  .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', 'woSvc', function ( $scope, $location, mainSvc woSvc ) {
+  .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', 'woSvc', function ( $scope, $location, mainSvc, woSvc ) {
 
-    // coming from
-    // dummy data
-    // TODO: must be replaced with a call from the server
+    $scope.getWorkOrders = function () {
+      woSvc.getWorkOrders()
+        .then( function ( response ) {
+          $scope.workOrders = response.data
+        } );
+    }
+    $scope.getWorkOrders();
+
     $scope.jobs = [ {
         location: 'Provo',
         name: 'Brack',

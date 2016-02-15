@@ -1,31 +1,31 @@
 angular.module( "inventoryApp" )
-  .controller( "customerCtrl", function ( customerSvc, $scope, $state ) {
+  .controller( "customerCtrl", function ( customerSvc, $scope, $state, mainSvc, woSvc ) {
 
-      $scope.customerNumber = '001-000001-01'; // generate co number on backend, get from service.
+      $scope.customerNumber = '001-000001-01';
       $scope.state = $state;
-      $scope.workOrderNumber = '000001'; //generate wo number on backend, get from service.
-      // send new customer to backend through service
+      $scope.workOrderNumber = '000001';
       $scope.customers = [];
-      // these methods, we can call on the scope, but they are able to call the functions on the customerSvc,
-
-
+      mainSvc.selectedCustomer = $scope.selectedCustomer;
+      $scope.selectedCustomer;
       $scope.getCustomers = function () {
-        console.log( 'make order customerCtrl' );
         customerSvc.getCustomers()
           .then( function ( response ) {
             $scope.customers = response.data
-          } ); //invoke that homie
+          } );
       }
       $scope.getCustomers();
 
       $scope.createCustomer = function ( customer ) {
         customerSvc.createCustomer( customer )
           .then( function ( response ) {
+            $scope.selectedCustomer.customerId = response.data._id;
+            console.log(response);
+            console.log(response.data._id);
             $scope.getCustomers();
           } )
       }
 
-      $scope.updateCustomer = function ( id, updatedCustomer ) {// just check to see what our service needs to have passed to it, this will help determine our arguments that we pass into our function.
+      $scope.updateCustomer = function ( id, updatedCustomer ) {
       $scope.getCustomers( id, updatedCustomer )
         .then( function ( response ) {
           $scope.getCustomers();

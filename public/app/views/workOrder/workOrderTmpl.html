@@ -1,12 +1,13 @@
-<!-- <customer-disp-dir></customer-disp-dir> -->
-<customer-Dir></customer-Dir>
-<form ng-submit="createWorkOrder(workOrder)" id="woForm">
-  <div id=customerLeftBlock>
-    <input ng-model="workOrder.reason" class="customerInput" type="text" name="reasonForServiceRequest" placeholder="reasonForServiceRequest">
-    <input ng-model="workOrder.date" class="customerInput" type="date" name="serviceDate" placeholder="serviceDate">
-  </div>
+<div id="woWrapper">
+  <customer-Dir></customer-Dir>
+  <form ng-submit="createWorkOrder(workOrder);" id="woForm">
+    <div class="customerLeftBlock">
+      <input ng-model="workOrder.reason" class="customerInput" type="text" name="reasonForServiceRequest" placeholder="reasonForServiceRequest">
+      <input ng-model="workOrder.date" class="customerInput" type="date" name="serviceDate" placeholder="serviceDate">
+    </div>
 
-  <textarea ng-model="workOrder.notes" id="woTextArea" rows="4" name="detail" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
+    <textarea ng-model="workOrder.notes" id="woTextArea" rows="4" name="detail" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
 
-  <button type="submit" placeholder="EnterTextHere">Submit Work Order</button>
-</form>
+    <button type="submit" placeholder="EnterTextHere">Submit Work Order</button>
+  </form>
+</div>
