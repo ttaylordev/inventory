@@ -1,8 +1,13 @@
 angular.module( "inventoryApp" )
   .controller( "customerCtrl", function ( mainSvc, $scope, $state ) {
-    // $scope.customerNumber = mainSvc.customer.number; TODO:
+    $scope.customerNumber = '001-000001-01'; // generate co number on backend, get from service.
     $scope.state = $state;
+    $scope.workOrderNumber = '000001'; //generate wo number on backend, get from service.
+
+    // send new customer to backend through service
   } );
+
+
 // almost always, both will have a .then
 // not only does it have the data that the controller asked for, but it has a status code, headers, and other things that I dont need in my controller. typically I will return response.data
 

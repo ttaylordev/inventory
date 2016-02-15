@@ -1,5 +1,7 @@
 angular.module( "inventoryApp" )
   .controller( "searchFieldCtrl", function ( $scope, mainSvc ) {
+
+    // dummy data until I can get my mainSvc to return the goodness.
     $scope.things = [ {
       id: 1,
       label: 'aLabel',
@@ -14,7 +16,6 @@ angular.module( "inventoryApp" )
       }
     } ];
     $scope.selected = $scope.things[ 0 ];
-    // dummy data until I can get my mainSvc to return the goodness.
     // NOTE: It's using an array of objects...
   } );
 //TODO: make an inventory list page and route it properly, right now, the inventory is routing to landing within this controller.

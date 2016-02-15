@@ -1,18 +1,50 @@
+<div id="customerTmplWrap">
+  <button ng-hide="selectCustomer" ng-click="selectCustomer = !selectCustomer" type="button" name="button">Select Customer</button>
+  <select ng-show="selectCustomer" type="select" name="select" placeholder="Select Customer">
+    <option ng-options="customer.id as (customer.name) for customer in customers"></option>
+  </select>
+  <button ng-click="addNewCustomer = !addNewCustomer" type="button" name="button">Add New Customer</button>
 
-<form class="customerForm" action="index.html" method="post">
-  <div>Customer#: {{customerNumber}}</div>
-{{state.current.name | uppercase}}
+  <!-- ng-show"selectCustomer"  -->
+  <form ng-show="addNewCustomer" class="customerForm" action="index.html" method="post">
+    <div class="customerTopBlock">
+      <div class="numberWraper">Customer#:
+        <span id="orderNumber">{{customerNumber}}</span>
+      </div>
+      <div class=numberWraper>{{state.current.name | lowercase}}
+        <span id="orderNumber">#:{{workOrderNumber}}</span>
+      </div>
+    </div>
+  </form>
+  <!-- selectCustomer queries a list of all customers, and allows selection of one. -->
+  <!-- new Customer allows the entering a new customer in the db -->
+  <!-- maybe an ng-show or ng-if or ng-cloak -->
 
-  <img id="miniLogo" src="./media/miniLogo.png"/>
-  <input class="customerInput" type="text" name="firstName" value="" placeholder="firstName">
-  <input class="customerInput" type="text" name="lastName" value="" placeholder="lastName">
-  <input class="customerInput" type="text" name="address" value="" placeholder="address">
-  <!-- Inputs -->
-  <!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
+  <form ng-show="addNewCustomer" class="customerForm" action="index.html" method="post">
 
-  <!-- Display Outputs -->
-  <!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
-  <!-- TODO: attach current user as the technician name -->
-  <!-- TODO: itemized charges NOTE: should allow editing for certain users-->
+    <div class="customerBotBlock">
+      <div class="customerRightWrapper">
 
-</form>
+        <img id="miniLogo" src="./media/miniLogo.png"/>
+
+        <div class="radioWrapper">
+          Warranty:
+          <br/>
+          Yes<input class="radio" name="warranty" type="radio" value="yes" name="warrantyYes">
+          No<input class="radio" name="warranty" type="radio" value="no" name="warrantyNo">
+        </div>
+      </div>
+      <input class="customerInput" type="text" name="firstName" value="" placeholder="firstName">
+      <input class="customerInput" type="text" name="lastName" value="" placeholder="lastName">
+      <input class="customerInput" type="text" name="email" value="" placeholder="email">
+      <input class="customerInput" type="text" name="address" value="" placeholder="address">
+    </div>
+  </form>
+  <hr class="hr">
+</div>
+<!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
+
+<!-- Display Outputs -->
+<!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
+<!-- TODO: attach current user as the technician name -->
+<!-- TODO: itemized charges NOTE: should allow editing for certain users-->

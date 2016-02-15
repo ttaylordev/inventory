@@ -2,7 +2,7 @@
   <div id="hamburgerWraper">
     <span id="hamburger" ng-click="navshow = !navshow"></span>
   </div>
-  <nav-menu-dir ng-show="navshow"></nav-menu-dir>
+  <nav-menu-dir ng-if="navshow"></nav-menu-dir>
   <div id="currentView">{{state.current.name | uppercase}}</div>
   <alert-dir></alert-dir>
 </div>

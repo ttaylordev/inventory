@@ -1,18 +1,29 @@
 testing from customerDisp.html
 <div class="customerDispWrapper">
-  <img src="./public/media/miniLogo.png"/>
-  {{mainSvc.customer.firstName}}
-  {{mainSvc.customer.lastName}}
-  {{mainSvc.customer.address}}
-  {{mainSvc.customer.email}}
-  {{mainSvc.customer.warrantyStatus}}
-  {{mainSvc.customer.balance}}
+  testing again from customerDisp.html
+  <img src="./media/miniLogo.png"/>
+  <div ng-repeat="cDisp in customerDisp" ng-model="cDispObj" class="perCustomerWrapper">
+  <!-- {{customerDisp[0]}} -->
+  <p>{{cDisp.firstName}}, {{cDisp.lastName}}</p>
+  <p>{{cDisp.address}}  {{cDisp.city}}</p>
+  <p>{{cDisp.zip}}, {{cDisp.state}}</p>
+  <p>{{cDisp.email}}</p>
+  <p>Warranty?: {{cDisp.warrantyStatus}}</p>
+  <p>Outstanding Balance: {{cDisp.balance}}</p>
+<br>
 </div>
+</div>
+<!-- customerDisp on parent controller -->
 
-  <!-- Inputs -->
-  <!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
+<!-- TODO: one query from mainSvc, to retrieve customer info and WOinfo at the same time. -->
 
-  <!-- Display Outputs -->
-  <!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
-  <!-- TODO: attach current user as the technician name -->
-  <!-- TODO: itemized charges NOTE: should allow editing for certain users-->
+<!-- probably will not want an ng-repeat here, but it was great practice.
+ -->
+ <!-- NOTE: only display one customer per PO/ WO -->
+<!-- Inputs -->
+<!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
+
+<!-- Display Outputs -->
+<!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
+<!-- TODO: attach current user as the technician name -->
+<!-- TODO: itemized charges NOTE: should allow editing for certain users-->

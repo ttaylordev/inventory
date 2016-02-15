@@ -1,5 +1,5 @@
-<div class="navMenuWrapper">
-  <span ui-sref="{{menuItem.route}}" ng-repeat="menuItem in menuItems" id="navMenuSelection"> {{menuItem.display}} <span>
+<div ng-click="navshow = !navshow" class="navMenuWrapper" ng-show="navshow">
+  <span  ui-sref="{{menuItem.route}}" ng-repeat="menuItem in menuItems" id="navMenuSelection" > {{menuItem.display}} <span>
 
 </div>
 

@@ -1,23 +1,25 @@
-<div ng-repeat="job in jobs | orderBy : 'time' : true" class="jobList">
-  <div class="jobWrapper">
-    <div class="jobLeftSideInfo">{{job.time | date : 'shortTime'}}</div>
-    <!-- // save the time as a date object, it will convert it into a date string-->
+<div class="jobListTmplWrap">
+  <div ng-repeat="job in jobs | orderBy : 'time' : true" class="jobList">
+    <div class="jobWrapper">
+      <div class="jobLeftSideInfo">{{job.time | date : 'shortTime'}}</div>
+      <!-- // save the time as a date object, it will convert it into a date string-->
 
-    <div ng-click="job.selected = !job.selected" class="details">
-      <span>{{job.name}}</span>
+      <div ng-click="job.selected = !job.selected" class="details">
+        <span>{{job.name}}</span>
+      </div>
+      <div class="jobRightSideInfo">{{job.location}}</div>
+
     </div>
-    <div class="jobRightSideInfo">{{job.location}}</div>
 
-  </div>
-
-<!-- Might make this link to:... work orders displayed... -->
-  <div ng-show="job.selected" class="selectedJob">
-    {{job.description}}
-    <div ng-repeat="part in job.parts">
-      {{part.name}}
-      {{part.description}}
+    <!-- Might make this link to:... work orders displayed... -->
+    <div ng-show="job.selected" class="selectedJob">
+      {{job.description}}
+      <div ng-repeat="part in job.parts">
+        {{part.name}}
+        {{part.description}}
+      </div>
     </div>
   </div>
+  <span type="button" id="addJobBtn" ui-sref="jobList.newJobModal">+</span>
+  <ui-view></ui-view>
 </div>
-<span type="button" id="addJobBtn" ui-sref="jobList.newJobModal">+</span>
-<ui-view></ui-view>

@@ -1,5 +1,5 @@
 angular.module( 'inventoryApp' )
-  .controller( 'newJobCtrl', [ '$scope', '$location', '$stateParams', function ( $scope, $location, $stateParams ) {
+  .controller( 'newJobCtrl', [ '$scope', '$location', function ( $scope, $location) {
 
     $scope.newJob = {
       firstName: "",

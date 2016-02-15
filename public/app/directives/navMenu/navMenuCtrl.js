@@ -1,19 +1,35 @@
 angular.module( "inventoryApp" )
-  .controller( "navMenuCtrl", function ( $scope ) {
-    $scope.menuItems = [ {
-      display: 'Home',
-      route: 'landing' //needs to match up with router
+  .controller( "navMenuCtrl", function ( $scope, $location ) {
+    $scope.menuItems = [
+      {
+        display: 'Schedule',
+        route: 'jobList'
     }, {
-      display: 'Tasks',
-      route: 'jobList'
+        display: 'Purchase Order',
+        route: 'purchaseOrder'
     }, {
-      display: 'Purchase Order',
-      route: 'purchaseOrder'
-    }, {
-      display: 'Inventory',
-      route: 'landing'
-  } ];
+        display: 'Work Orders',
+        route: 'workOrder' //needs to match up with router
+      }
+    ];
+
+
+    //   {
+    //     display: 'Inventory',
+    //     route: 'landing'
+    // }
+
+    // TODO: find a way to close the menuModal, without specifying a path here, maybe a large pseudo element with an onclick, and an onclick for the location, closing the modal as well
+    // $scope.closeModalByRoute = function (route) {
+    // var path = $location.path;
+    // console.log(path);
+    // $location.path('/purchaseOrder');
+    // console.log(path);
+    // };
   } );
+
+// TODO: an issue here, with where to route it... maybe a track by menuItem.route or soemthing
+
 
 
 //TODO: make an inventory list page and route it properly, right now, the inventory is routing to landing within this controller.

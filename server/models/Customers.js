@@ -28,15 +28,19 @@ var UserSchema = new mongoose.Schema( { // we dont' have to build a User ID, mon
     lowercase: true,
     maxlength: 20
   },
-  DateSinceLastService: {
-    type: Date,
-  },
-  DateOfInitialService: {
-    type: Date,
-  },
-  Email: {
+  email: {
     Type: Email,
   },
+  dateOfInitialService: {
+    type: Date,
+  },
+  dateSinceLastService: {
+    type: Date,
+  },
+  frequencyOfService: {
+    type: Date,
+  },
+
 
 } );
 
