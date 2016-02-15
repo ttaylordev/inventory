@@ -1,17 +1,17 @@
 {
-  "name": "server",
+  "name": "deployment_app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "deployment app",
+  "main": "./server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./server/index.js"
   },
-  "author": "",
+  "author": "\"Tyson Taylor\"",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.2",
     "cors": "^2.7.1",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "mongoose": "^4.4.3"
   }
 }

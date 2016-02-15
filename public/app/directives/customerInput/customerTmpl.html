@@ -1,11 +1,11 @@
 <div id="customerTmplWrap">
   <button ng-hide="selectCustomer" ng-click="selectCustomer = !selectCustomer" type="button" name="button">Select Customer</button>
-  <select ng-show="selectCustomer" type="select" name="select" placeholder="Select Customer">
-    <option ng-options="customer.id as (customer.name) for customer in customers"></option>
+  <select ng-show="selectCustomer" ng-options="customer.firstName for customer in customers" ng-model="selectedCustomer" type="select" name="select" placeholder="Select Customer">
+    <option value="">Select Customer</option>
   </select>
+  <customer-disp-dir ng-show="selectedCustomer" customer="selectedCustomer"></customer-disp-dir>
   <button ng-click="addNewCustomer = !addNewCustomer" type="button" name="button">Add New Customer</button>
 
-  <!-- ng-show"selectCustomer"  -->
   <form ng-show="addNewCustomer" class="customerForm" action="index.html" method="post">
     <div class="customerTopBlock">
       <div class="numberWraper">Customer#:
@@ -16,11 +16,8 @@
       </div>
     </div>
   </form>
-  <!-- selectCustomer queries a list of all customers, and allows selection of one. -->
-  <!-- new Customer allows the entering a new customer in the db -->
-  <!-- maybe an ng-show or ng-if or ng-cloak -->
 
-  <form ng-show="addNewCustomer" class="customerForm" action="index.html" method="post">
+  <form ng-submit="createCustomer(customer)" ng-show="addNewCustomer" class="customerForm">
 
     <div class="customerBotBlock">
       <div class="customerRightWrapper">
@@ -34,15 +31,16 @@
           No<input class="radio" name="warranty" type="radio" value="no" name="warrantyNo">
         </div>
       </div>
-      <input class="customerInput" type="text" name="firstName" value="" placeholder="firstName">
-      <input class="customerInput" type="text" name="lastName" value="" placeholder="lastName">
-      <input class="customerInput" type="text" name="email" value="" placeholder="email">
-      <input class="customerInput" type="text" name="address" value="" placeholder="address">
+      <!-- ng-model boject notation -->
+      <input ng-model="customer.firstName" class="customerInput" type="text" name="firstName" value="" placeholder="firstName">
+      <input ng-model="customer.lastName" class="customerInput" type="text" name="lastName" value="" placeholder="lastName">
+      <input ng-model="customer.email" class="customerInput" type="text" name="email" value="" placeholder="email">
+      <input ng-model="customer.address" class="customerInput" type="text" name="address" value="" placeholder="address">
+      <button type="submit" name="button">Submit</button>
     </div>
   </form>
   <hr class="hr">
 </div>
-<!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
 
 <!-- Display Outputs -->
 <!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->

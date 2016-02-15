@@ -1,8 +1,10 @@
 var mongoose = require( 'mongoose' );
 var ObjectId = mongoose.Schema.Types.ObjectId;
 // var LocSchema = require( './locationSchema' ); example, doesn' tmean anything in this context
-var UserSchema = new mongoose.Schema( { // we dont' have to build a User ID, mongoose does that for us cause' it's the bomb.com
-  firstName: {
+// we dont' have to build a User ID, mongoose does that for us cause' it's the bomb.com
+var CustomerSchema = new mongoose.Schema( {
+
+firstName: {
     type: String,
     lowercase: true
   },
@@ -29,7 +31,7 @@ var UserSchema = new mongoose.Schema( { // we dont' have to build a User ID, mon
     maxlength: 20
   },
   email: {
-    Type: Email,
+    Type: String,
   },
   dateOfInitialService: {
     type: Date,
@@ -40,12 +42,17 @@ var UserSchema = new mongoose.Schema( { // we dont' have to build a User ID, mon
   frequencyOfService: {
     type: Date,
   },
+  date: {
+    type: Date,
+    default: new Date()
+  }
 
 
 } );
 
+module.exports = mongoose.model( 'CustomerCollection', CustomerSchema );
+// mongoose.model is creating a Users(it pluralizes it for you, it's kind of bizarre) collection. analagous  to a SQL table.
 // module.exports is a method of Node.js, that allows other files access to the contents of the mongoose.model created as 'User' from the UserSchema
-module.exports = mongoose.model( 'User', UserSchema ); // mongoose.model is creating a Users(it pluralizes it for you, it's kind of bizarre) collection. analagous  to a SQL table.
 
 
 

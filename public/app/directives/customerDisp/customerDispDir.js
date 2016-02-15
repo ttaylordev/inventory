@@ -3,6 +3,9 @@ angular.module( "inventoryApp" )
     return {
       templateUrl: './app/directives/customerDisp/customerDisp.html',
       controller: 'customerDispCtrl',
-      restrict: 'E'
+      restrict: 'E',
+      scope:{
+        customer:"="
+      }
     }
   } );

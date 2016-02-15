@@ -1,15 +1,14 @@
-testing from customerDisp.html
+
 <div class="customerDispWrapper">
-  testing again from customerDisp.html
   <img src="./media/miniLogo.png"/>
-  <div ng-repeat="cDisp in customerDisp" ng-model="cDispObj" class="perCustomerWrapper">
+  <div  ng-model="cDispObj" class="perCustomerWrapper">
   <!-- {{customerDisp[0]}} -->
-  <p>{{cDisp.firstName}}, {{cDisp.lastName}}</p>
-  <p>{{cDisp.address}}  {{cDisp.city}}</p>
-  <p>{{cDisp.zip}}, {{cDisp.state}}</p>
-  <p>{{cDisp.email}}</p>
-  <p>Warranty?: {{cDisp.warrantyStatus}}</p>
-  <p>Outstanding Balance: {{cDisp.balance}}</p>
+  <p>{{customer.lastName}}, {{customer.firstName}}</p>
+  <p>{{customer.address}}  {{customer.city}}</p>
+  <p>{{customer.zip}}, {{customer.state}}</p>
+  <p>{{customer.email}}</p>
+  <p>Warranty?: {{customer.warrantyStatus}}</p>
+  <p>Outstanding Balance: {{customer.balance}}</p>
 <br>
 </div>
 </div>
