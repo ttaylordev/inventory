@@ -4,7 +4,7 @@ var ObjectId = mongoose.Schema.Types.ObjectId;
 // we dont' have to build a User ID, mongoose does that for us cause' it's the bomb.com
 var CustomerSchema = new mongoose.Schema( {
 
-firstName: {
+  firstName: {
     type: String,
     lowercase: true
   },
@@ -16,6 +16,9 @@ firstName: {
     type: String,
     lowercase: true,
     maxlength: 20
+  },
+  zip: {
+    type: String,
   },
   city: {
     type: String,

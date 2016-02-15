@@ -33,10 +33,6 @@ angular.module( 'inventoryApp' )
       controller: 'poCtrl'
     };
 
-    // resolve that checks for auth true, if not, takes you back ot landing page
-    // specify the url in the routing, so that we can shortcut while typing in the url.
-    // it gives it a way to parse the url and direct it to where it ought to go.
-
     $stateProvider
       .state( jobListState )
       .state( newJobModalState )
@@ -46,3 +42,28 @@ angular.module( 'inventoryApp' )
 
 
   } );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // resolve that checks for auth true, if not, takes you back ot landing page
+      // specify the url in the routing, so that we can shortcut while typing in the url.
+      // it gives it a way to parse the url and direct it to where it ought to go.

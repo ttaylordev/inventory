@@ -1,14 +1,14 @@
 
 <div class="customerDispWrapper">
-  <img src="./media/miniLogo.png"/>
+  <img id="miniLogo" src="./media/miniLogo.png"/>
   <div  ng-model="cDispObj" class="perCustomerWrapper">
   <!-- {{customerDisp[0]}} -->
   <p>{{customer.lastName}}, {{customer.firstName}}</p>
-  <p>{{customer.address}}  {{customer.city}}</p>
-  <p>{{customer.zip}}, {{customer.state}}</p>
   <p>{{customer.email}}</p>
-  <p>Warranty?: {{customer.warrantyStatus}}</p>
-  <p>Outstanding Balance: {{customer.balance}}</p>
+  <p>{{customer.address}}</p>
+  <p>{{customer.zip}}where's the zip?</p>
+  <p>{{customer.city}}, {{customer.state}}</p>
+  <p>WarrantyStatus: {{customer.warrantyStatus}}</p>
 <br>
 </div>
 </div>

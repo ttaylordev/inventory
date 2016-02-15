@@ -13,7 +13,6 @@ angular.module( "inventoryApp" )
         console.log( 'make order customerCtrl' );
         customerSvc.getCustomers()
           .then( function ( response ) {
-            console.log( 'Customer recieves food ', response.data );
             $scope.customers = response.data
           } ); //invoke that homie
       }

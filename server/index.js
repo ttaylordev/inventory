@@ -4,9 +4,9 @@ var cors = require( 'cors' );
 var bodyParser = require( 'body-parser' );
 var mongoose = require( 'mongoose' );
 
-
 // Controllers
-var customerCtrl = require( './controllers/customerController' ); //does not need a .js, it knows that if you are requiring it, that it should be a js file.
+var customerCtrl = require( './controllers/customerController' );
+var workOrderCtrl = require('./controllers/workOrderController')
 
 //initialize app
 var app = express();
@@ -14,26 +14,25 @@ var app = express();
 //initialize dependencies
 app.use( cors() );
 app.use( bodyParser.json() );
-app.use( express.static( __dirname + './../public' ) ); // NOTE: tells it to host this static page for us Local through Nodemon.
-// jumps out of the current directory and goes into the public directory. __dirname is a javascript reserved word that means current directory within the file structure.
-// static sends the app, the public folder, through the express.static method, to whoever requests it. Through the URL. It's similar to an HTTP request, that happens without us asking it to.
-// the cache is loaded with the script sources from the index.html
+app.use( express.static( __dirname + './../public' ) );
 
 
 //endpoints
-// create end point
+// create
 app.post( '/customer', customerCtrl.create );
-
-// update end point
-app.put( '/customer/:id', customerCtrl.update );
-
-//delete end point
-app.delete( '/customer/:id', customerCtrl.delete );
-// read end point
-// a get method that is being passed a URL, and a callback.
-// customers URL, using the callback method, read, on the customerCtrl object.
+// read
 app.get( '/customer', customerCtrl.read );
-//callback is when you pass the name specifically without invoking it, and the app will use it itself.
+// update
+app.put( '/customer/:id', customerCtrl.update );
+// delete
+app.delete( '/customer/:id', customerCtrl.delete );
+
+app.post( '/workOrder', workOrderCtrl.create );
+app.get( '/workOrder', workOrderCtrl.read );
+app.put( '/workOrder/:id', workOrderCtrl.update );
+app.delete( '/workOrder/:id', workOrderCtrl.delete );
+
+
 
 
 //routing Variables

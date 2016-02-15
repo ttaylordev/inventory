@@ -1,24 +1,12 @@
 <!-- <customer-disp-dir></customer-disp-dir> -->
 <customer-Dir></customer-Dir>
-<form class="woForm" action="index.html" method="post">
-  <input class="customerInput" type="text" name="reasonForServiceRequest" value="" placeholder="reasonForServiceRequest">
+<form ng-submit="createWorkOrder(workOrder)" id="woForm">
+  <div id=customerLeftBlock>
+    <input ng-model="workOrder.reason" class="customerInput" type="text" name="reasonForServiceRequest" placeholder="reasonForServiceRequest">
+    <input ng-model="workOrder.date" class="customerInput" type="date" name="serviceDate" placeholder="serviceDate">
+  </div>
 
-  <input class="customerInput" type="text" name="serviceDate " value="" placeholder="serviceDate">
-  <textarea class="customerInput woTextArea" rows="4" name="detail" ng-model="newJob.detail" value="" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
+  <textarea ng-model="workOrder.notes" id="woTextArea" rows="4" name="detail" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
 
-  <button type="submit" name="name" value="" placeholder="EnterTextHere">This is a button</button>
+  <button type="submit" placeholder="EnterTextHere">Submit Work Order</button>
 </form>
-
-<!-- TODO: take in current date from a function -->
-<!-- TODO: address the ng-repeat on the customer Disp issue. -->
-<!-- Inputs -->
-<!-- TODO: Odometer input NOTE: hidden from customer -->
-<!-- TODO: referral name auto populated, but receptive to input NOTE: the referree should recieve a credit, unless he is the contractor for whome the home was built, at that point it should be added to the contractors associated jobs -->
-
-<!-- Display Outputs -->
-<!-- TODO: display total parts used -->
-<!-- TODO: generate a job order number -->
-<!-- TODO: total charge should be summed -->
-<!-- TODO: NOTE: future signiture pannel for mobile -->
-
-<!-- focus on one thing at a time.  -->

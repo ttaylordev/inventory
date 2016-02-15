@@ -1,51 +1,51 @@
 angular.module( "inventoryApp" )
-  .service( "customerSvc", function ($http) {
+  .service( "woSvc", function ($http) {
 
 
-    this.getCustomers = function () {
+    this.getWorkOrders = function () {
       return $http( {
           method: 'GET',
-          url: '/customer' 
+          url: '/workOrder'
         } )
         .then( function ( response ) {
           return response;
         } );
     };
 
-    // singular customer
-    this.getCustomer = function () {
+    // singular workOrder
+    this.getWorkOrder = function () {
       return $http( {
         method: 'GET',
-        url: '/customer?_id=' + id
+        url: '/workOrder?_id=' + id
       } );
     };
 
-    this.createCustomer = function ( customer ) {
+    this.createWorkOrder = function ( workOrder ) {
       return $http( {
           method: 'POST',
-          url: '/customer',
-          data: customer
+          url: '/workOrder',
+          data: workOrder
         } )
         .then( function ( response ) {
           return response;
         } );
     };
 
-    this.editCustomer = function ( id, customer ) {
+    this.editWorkOrder = function ( id, workOrder ) {
       return $http( {
           method: 'PUT',
-          url: "/customer/" + id,
-          data: customer
+          url: "/workOrder/" + id,
+          data: workOrder
         } )
         .then( function ( response ) {
           return response;
         } );
     };
 
-    this.deleteCustomer = function () {
+    this.deleteWorkOrder = function () {
       return $http( {
           method: 'DELETE',
-          url: '/customer/' + id
+          url: '/workOrder/' + id
         } )
         .then( function ( response ) {
           return response;

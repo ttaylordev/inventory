@@ -22,6 +22,13 @@ body {
 
 #customerTmplWrap {}
 
+#customerLeftBlock{
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
 .customerRightWrapper {
   float: right;
   display: flex;
@@ -283,10 +290,9 @@ alert-dir {
 .customerDispWrapper {
   margin: auto;
   padding: 20px;
-  background-color: purple;
 }
 
-.woForm {}
+#woForm {}
 
 .woInput {
   margin-top: 2px;
@@ -294,7 +300,9 @@ alert-dir {
   width: 70vw;
 }
 
-.woTextArea {}
+#woTextArea {
+  width: 95vw;
+}
 
 #miniLogo {
   float: right;

@@ -4,7 +4,6 @@ var Customer = require( './../models/Customer' );
 // Exports
 module.exports = {
   create: function ( req, res ) {
-    console.log('Chef makes order');
     Customer.create( req.body, function ( err, message ) {
       if ( err ) {
         res.status( 500 ).send( err );
