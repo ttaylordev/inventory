@@ -1,7 +1,7 @@
 angular.module( 'inventoryApp' )
-  .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', function ( $scope, $location, mainSvc ) {
+  .controller( 'jobCtrl', [ '$scope', '$location', 'mainSvc', 'woSvc', function ( $scope, $location, mainSvc woSvc ) {
 
-    // coming from 
+    // coming from
     // dummy data
     // TODO: must be replaced with a call from the server
     $scope.jobs = [ {
