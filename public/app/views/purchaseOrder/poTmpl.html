@@ -1,9 +1,55 @@
 <div class="standAloneText">
+  <div id="jobListTmplWrap">
+    <div ng-repeat="workOrder in workOrderDetails | orderBy : 'date' : false | filter: {isComplete: true}" class="jobList" ng-hide="removeJob">
+      <!-- <span ng-click ="deleteWorkOrder(workOrder)"> delete </span> -->
+      <div class="jobWrapper" ng-click="workOrder.selected = !workOrder.selected">
+        <div class="jobLeftSideInfo">{{workOrder.date | date : 'shortDate'}}
+          <br/> {{workOrder.time | date : 'shortTime'}}
+        </div>
+
+        <div class="details">
+          <span>{{workOrder.customerId.firstName}}</span>
+          <span>{{workOrder.customerId.lastName}}</span>
+        </div>
+        <div class="jobRightSideInfo">
+          <span>{{workOrder.customerId.city}}</span>
+          <span>{{workOrder.customerId.state}}</span>
+
+        </div>
+
+      </div>
+
+      <!-- Might make this link to:... work orders displayed... -->
+      <div ng-show="workOrder.selected" class="selectedJob">
+        Address: {{workOrder.customerId.address}} {{workOrder.customerId.zip}} {{workOrder.customerId.city}}, {{workOrder.customerId.state}}
+        <hr/>
+        <br/> Dispatch Code: {{workOrder.reason}}
+        <hr/> Notes:
+        <br/> {{workOrder.notes}}
+        <div ng-click="removeJob=true" ng-model="$scope.job.isComplete" ng-change="$scope.job.isComplete = false;" type="button" name="button"  id="isCompleteBtn" style="padding-left:13px;">Remove Job</div>
+        <br/>
+        <!-- <div ng-repeat="part in job.parts">
+          {{part.name}} {{part.description}}
+        </div> -->
+      </div>
+    </div>
+    <div type="button" id="addJobBtn" ui-sref="jobList.newJobModal">
+    </div>
+    <ui-view></ui-view>
+  </div>
 
 
   <!-- // put the ng-repeat on ths end -->
-  <search-field-dir>{{testSFCtrl}}</search-field-dir>
+  <!-- <search-field-dir>{{testSFCtrl}}</search-field-dir> -->
 </div>
+
+
+
+
+
+
+
+
 
 <!-- TODO: inventory name -->
 <!-- TODO: inventory qty -->

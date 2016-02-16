@@ -6,8 +6,8 @@ var mongoose = require( 'mongoose' );
 
 // Controllers
 var customerCtrl = require( './controllers/customerController' );
-var workOrderCtrl = require('./controllers/workOrderController')
-
+var workOrderCtrl = require('./controllers/workOrderController');
+var jobListCtrl = require('./controllers/jobListController');
 //initialize app
 var app = express();
 
@@ -31,6 +31,10 @@ app.post( '/workOrder', workOrderCtrl.create );
 app.get( '/workOrder', workOrderCtrl.read );
 app.put( '/workOrder/:id', workOrderCtrl.update );
 app.delete( '/workOrder/:id', workOrderCtrl.delete );
+
+
+app.get( '/schedule', jobListCtrl.readPop );
+
 
 
 

@@ -18,11 +18,58 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.standAloneText {}
+#authParent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#authAndRegWindow {
+  justify-content: center;
+  margin: auto;
+}
+
+#landingBackground {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  /*margin-left: 50vw;
+  margin-right: 50vw;*/
+}
+
+#centerBackGround {
+  justify-content: center;
+  margin: auto;
+}
+
+#centerThatButton {
+  justify-content: center;
+  margin: auto;
+}
+
+#signInBtn {
+  justify-content: center;
+  margin: auto;
+  padding-left: 25%;
+  padding-right: 25%;
+  max-height: 50px;
+}
 
 .hr {
   width: 100vw;
   margin-bottom: 3px;
+}
+
+#customerTopBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.custTopBtn {
+  flex-grow: 1;
+  max-width: 49vw;
 }
 
 #customerTmplWrap {}
@@ -108,7 +155,7 @@ body::-webkit-scrollbar {
   margin-top: 1px;
   margin-bottom: 10px;
   overflow: none;
-  z-index: 100;
+  z-index: 99;
 }
 
 #uiView {
@@ -126,10 +173,36 @@ body::-webkit-scrollbar {
   overflow: none;
 }
 
+#isCompleteBtn {
+  position: relative;
+  bottom: -16px;
+  margin-top: 30px;
+  margin-left: calc(100vw - 109px);
+  padding-right: 0px;
+  padding-left: 5px;
+  width: 107px;
+  background: #353a3d;
+  background: -moz-linear-gradient(top, #353a3d 0%, #4c616d 3%, #2c393f 6%, #4c616d 97%, #2c393f 100%);
+  background: -webkit-linear-gradient(top, #353a3d 0%, #4c616d 3%, #2c393f 6%, #4c616d 97%, #2c393f 100%);
+  background: linear-gradient(to bottom, #353a3d 0%, #4c616d 3%, #2c393f 6%, #4c616d 97%, #2c393f 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#353a3d', endColorstr='#2c393f', GradientType=0);
+}
+
+#isCompleteBtn:hover{
+  background: #201f22;
+  background: -moz-linear-gradient(top, #201f22 0%, #353542 3%, #201f22 94%, #353542 97%, #201f22 100%);
+  background: -webkit-linear-gradient(top, #201f22 0%, #353542 3%, #201f22 94%, #353542 97%, #201f22 100%);
+  background: linear-gradient(to bottom, #201f22 0%, #353542 3%, #201f22 94%, #353542 97%, #201f22 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#201f22', endColorstr='#201f22', GradientType=0);
+
+}
+#isCompleteBtn:active{
+  bottom: -14px;
+}
 #headerTmplWrapper {
   position: fixed;
   overflow: none;
-  margin-top: 0px;
+  margin-top: -1px;
   margin-bottom: 1px;
   padding-top: 1px;
   padding-bottom: 1px;
@@ -181,10 +254,10 @@ alert-dir {
 .navMenuWrapper {
   display: flex;
   position: fixed;
-  margin-top: 19px;
-  width: 98vw;
-  height: 8vh;
-  z-index: 100;
+  margin-top: 18px;
+  width: 100vw;
+  max-height: 16vh;
+  z-index: 99;
   top: 3px;
   left: 0;
   background-color: #2C393F;
@@ -214,6 +287,7 @@ alert-dir {
 
 .jobWrapper {
   display: flex;
+  flex-direction: row;
   outline: 1px solid black;
   background-color: rgb(32, 31, 34);
   background-color: #201f22;
@@ -244,39 +318,52 @@ alert-dir {
 .jobWrapper:active {
   position: relative;
   top: 2px;
+  text-align: center;
 }
 
 .jobLeftSideInfo {
-  flex: 1.8;
   font-size: 0.8em;
   text-align: left;
+  min-width: 65px;
+  min-width: 65px;
 }
 
 .jobRightSideInfo {
-  flex: 1.8;
   font-size: 0.8em;
   text-align: right;
+  width: 100px;
+  min-width: 75px;
+  max-width: 100px;
 }
 
 .selectedJob {
   background-color: rgba(52, 52, 52, 0.85);
+  border-top-color: rgba(52, 52, 52, 0.62);
+  border-bottom-color: rgba(52, 52, 52, 0.62);
   margin-top: 1px;
   margin-bottom: 1px;
 }
 
 .details {
-  flex: 6.4;
-  font-size: 2em;
+  flex-grow: 7;
+  flex-shrink: 7;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 1em;
   text-align: center;
   position: relative;
   background-color: #D4B30;
+  padding-left: 28px;
+  pointer-events: none;
 }
 
 #addJobBtn {
   padding: 0 50% 0 50%;
   font-size: 2em;
   font-weight: bold;
+  text-align: center;
   position: fixed;
+  height: 40px;
   bottom: 0;
   border: 4px solid darkgrey;
   border: 2px solid black;
@@ -363,7 +450,7 @@ alert-dir {
 
 #addCustBtn {
   float: right;
-  margin: 0px 5px 0px 5px;
+  margin: 0px 0px 0px 5px;
 }
 
 .customerDispWrapper {
@@ -373,10 +460,12 @@ alert-dir {
   float: left;
   font-size: 1em;
 }
-.customerDir{
+
+.customerDir {
   flex: 1;
   flex-grow: 1;
 }
+
 #woWrapper {
   padding-top: 24px;
   display: flex;
@@ -394,23 +483,28 @@ alert-dir {
   bottom: 0px;
   position: absolute;
   max-height: calc(100vh - 275px);
-
 }
 
 .woDate {
   max-width: 250px;
   margin-right: 10px;
+}
 
+.woTime {
+  max-width: 250px;
+  margin-right: 2px;
+  float: right;
 }
 
 .woInput {
-  width: 97vw;
+  width: 96vw;
   height: 2em;
+  margin-right: 2px;
 }
 
 #woTextArea {
   height: calc(100vh - 275px);
-  rows: 10;
+  margin-right: 2px;
 }
 
 #miniLogo {
@@ -430,15 +524,26 @@ alert-dir {
 
 /*Modal*/
 
+#submittedConfirmation {
+  width: 200px;
+  z-index: 1200;
+  position: absolute;
+  border-radius: 6px;
+  left: 14vw;
+  right: 14vw;
+  top: 20%;
+  background-color: #2C393F;
+  color: #f2f2f2;
+}
+
 .overlay {
   color: black;
-  position: fixed;
   left: 25%;
   top: 20%;
   padding: 25px;
   border: 2px solid black;
   background-color: #ffffff;
-  z-index: 100;
+  z-index: 115;
   overflow: auto;
   border-radius: 2px;
   border: 1px solid #C0C3C5;
@@ -452,7 +557,7 @@ alert-dir {
   -moz-opacity: 0.7;
   opacity: .70;
   filter: alpha(opacity=70);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 90;
 }

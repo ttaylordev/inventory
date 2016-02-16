@@ -1,24 +1,45 @@
 angular.module( "inventoryApp" )
-  .controller( "workOrderCtrl", function ( $scope, $state, woSvc, customerSvc, mainSvc ) {
+  .controller( "workOrderCtrl", function ( $scope, $state, woSvc, customerSvc, mainSvc, ModalService ) {
 
     $scope.state = $state;
-    $scope.workOrderNumber = '000001';
     $scope.workOrders = [];
+    $scope.workOrder = {};
+    $scope.selectedCustomer;
 
-    console.log( $scope.customerId );
+// Modal Service
+$scope.openConfirmationModal = function () {
+  ModalService.showModal( {
+      templateUrl: "./app/modals/confirmationModal/confirmationModalTmpl.html", // points to the URL of the view
+      controller: "confirmationModalCtrl",
+
+    } )
+    .then( function ( modal ) {
+      modal.close.then( function ( then ) { // then will equal whatever happened to close
+      } );
+    } );
+}
+
+    // called from customerTmpl.html to give workOrder an associated customerId.\\
+    $scope.setCustIdToWorkOrder = function(){
+      $scope.workOrder.customerId = $scope.selectedCustomer._id;
+      console.log($scope.workOrder.customerId);
+      console.log($scope.selectedCustomer.firstName);
+    }
+
+      // CRUD Work Orders REST \\
     $scope.getWorkOrders = function () {
       woSvc.getWorkOrders()
         .then( function ( response ) {
           $scope.workOrders = response.data
+          console.log($scope.workOrders);
         } );
     }
     $scope.getWorkOrders();
 
     $scope.createWorkOrder = function ( workOrder ) {
-      workOrder.customerId = $scope.selectedCustomer._id;
-      console.log(workOrder.customerId);
       woSvc.createWorkOrder( workOrder )
         .then( function ( response ) {
+          $scope.openConfirmationModal();
         } )
     }
 
@@ -38,7 +59,7 @@ angular.module( "inventoryApp" )
 
 
 
-    // #############   CUSTOMER ENDPOINTS ################# \\
+    // CRUD Customers REST \\
 
     $scope.getCustomers = function () {
       customerSvc.getCustomers()
@@ -52,6 +73,8 @@ angular.module( "inventoryApp" )
       customerSvc.createCustomer( customer )
         .then( function ( response ) {
           $scope.selectedCustomer = response.data;
+          $scope.workOrder.customerId = $scope.selectedCustomer._id;
+          console.log($scope.workOrder.customerId);
           $scope.getCustomers();
           $scope.customer = '';
           $scope.addNewCustomer = !$scope.addNewCustomer;

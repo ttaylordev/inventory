@@ -1,12 +1,13 @@
 <div id="woWrapper">
   <customer-Dir id="customerDir" _id="_id"></customer-Dir>{{_id}}
-  <form ng-submit="createWorkOrder(workOrder);" class="woForm">
+  <form ng-show="workOrder.customerId" ng-submit="createWorkOrder(workOrder);" class="woForm">
     <div>
-      <input ng-model="workOrder.date" class="woDate" type="date" name="serviceDate" placeholder="serviceDate">
-      <input ng-model="workOrder.reason" class="woInput" type="text" name="reasonForServiceRequest" placeholder="reasonForService">
+      <input ng-model="workOrder.date" class="woDate" required type="date" name="serviceDate" placeholder="serviceDate">
+      <input ng-model="workOrder.time" class="woTime" required type="time" name="serviceDate" placeholder="serviceDate">
+      <input ng-model="workOrder.reason" class="woInput" required type="text" name="reasonForServiceRequest" placeholder="reasonForService">
     </div>
 
-    <textarea ng-model="workOrder.notes" id="woTextArea" name="detail" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
+    <textarea ng-model="workOrder.notes" id="woTextArea" required name="detail" placeholder="Please Enter Detailed Instructions for the Tech"></textarea>
 
     <button class="woInput" type="submit" placeholder="EnterTextHere">Submit Work Order</button>
   </form>

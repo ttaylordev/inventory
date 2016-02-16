@@ -5,7 +5,7 @@ angular.module( "inventoryApp" )
     this.getCustomers = function () {
       return $http( {
           method: 'GET',
-          url: '/customer' 
+          url: '/customer'
         } )
         .then( function ( response ) {
           return response;
@@ -13,7 +13,7 @@ angular.module( "inventoryApp" )
     };
 
     // singular customer
-    this.getCustomer = function () {
+    this.getCustomer = function (id) {
       return $http( {
         method: 'GET',
         url: '/customer?_id=' + id
@@ -42,7 +42,7 @@ angular.module( "inventoryApp" )
         } );
     };
 
-    this.deleteCustomer = function () {
+    this.deleteCustomer = function (id) {
       return $http( {
           method: 'DELETE',
           url: '/customer/' + id

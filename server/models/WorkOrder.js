@@ -4,11 +4,18 @@ var ObjectId = mongoose.Schema.Types.ObjectId;
 var WorkOrderSchema = new mongoose.Schema( {
 
   customerId: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId, ref:'CustomerCollection'
   },
   date: {
     type: Date,
     default: new Date()
+  },
+  time: {
+    type: String,
+  },
+  isComplete: {
+    type: Boolean,
+    default: false
   },
   reason: {
     type: String,

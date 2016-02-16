@@ -13,7 +13,8 @@ angular.module( "inventoryApp" )
     };
 
     // singular workOrder
-    this.getWorkOrder = function () {
+    this.getWorkOrder = function (id) {
+      console.log(id);
       return $http( {
         method: 'GET',
         url: '/workOrder?_id=' + id

@@ -15,8 +15,8 @@ module.exports = {
   },
 
   read: function ( req, res ) {
+    console.log(req.query);
     WorkOrder.find( req.query)
-    //.populate('customerId')
     .exec( function ( err, message ) {
       if ( err ) {
         console.log(err);
