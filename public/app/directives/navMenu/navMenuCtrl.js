@@ -5,11 +5,11 @@ angular.module( "inventoryApp" )
         display: 'Schedule',
         route: 'jobList'
     }, {
-        display: 'Purchase Order',
-        route: 'purchaseOrder'
+        display: 'Completed',
+        route: 'completed'
     }, {
-        display: 'Work Orders',
-        route: 'workOrder' //needs to match up with router
+        display: 'WorkOrders',
+        route: 'workOrders' //needs to match up with router
       }
     ];
 

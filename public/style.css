@@ -37,10 +37,22 @@ body::-webkit-scrollbar {
   /*margin-left: 50vw;
   margin-right: 50vw;*/
 }
+#backgroundImage{
+  width: 200px;
+}
+#fadedBackground {
+  opacity: 0.6;
+  /*margin: auto;*/
+  margin-left: calc(0vw - 33px);
+  width: 72px;
+
+}
 
 #centerBackGround {
   justify-content: center;
   margin: auto;
+  width: 200px;
+
 }
 
 #centerThatButton {
@@ -248,7 +260,7 @@ body::-webkit-scrollbar {
 
 alert-dir {
   width: 1.25em;
-  background-color: purple;
+  /*background-color: purple;*/
 }
 
 .navMenuWrapper {

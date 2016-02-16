@@ -1,6 +1,6 @@
 angular.module( 'inventoryApp' )
   .config( function ( $stateProvider, $urlRouterProvider ) {
-    $urlRouterProvider.otherwise( '/jobList' );
+    $urlRouterProvider.otherwise( '/landing' );
 
     var jobListState = {
       name: 'jobList',
@@ -21,14 +21,14 @@ angular.module( 'inventoryApp' )
       controller: 'landingCtrl'
     };
     var workOrderState = {
-      name: 'workOrder',
+      name: 'workOrders',
       url: '/workOrder',
       templateUrl: './app/views/workOrder/workOrderTmpl.html',
       controller: 'workOrderCtrl'
     };
-    var purchaseOrderState = {
-      name: 'purchaseOrder',
-      url: '/purchaseOrder',
+    var completedWorkState = {
+      name: 'completed',
+      url: '/completedWork',
       templateUrl: './app/views/purchaseOrder/poTmpl.html',
       controller: 'poCtrl'
     };
@@ -37,7 +37,7 @@ angular.module( 'inventoryApp' )
       .state( jobListState )
       .state( newJobModalState )
       .state( workOrderState )
-      .state( purchaseOrderState )
+      .state( completedWorkState )
       .state( landingState );
 
 
