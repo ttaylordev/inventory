@@ -15,8 +15,11 @@ module.exports = {
   },
 
   read: function ( req, res ) {
-    WorkOrder.find( req.query, function ( err, message ) {
+    WorkOrder.find( req.query)
+    //.populate('customerId')
+    .exec( function ( err, message ) {
       if ( err ) {
+        console.log(err);
         res.status( 500 )
           .send( err );
       }
@@ -39,6 +42,7 @@ module.exports = {
   delete: function ( req, res ) {
     WorkOrder.findByIdAndRemove( req.params.id, function ( err, message ) {
       if ( err ) {
+        console.log(err);
         res.status( 500 )
           .send( err );
       }

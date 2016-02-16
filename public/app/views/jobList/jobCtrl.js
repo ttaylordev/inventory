@@ -9,6 +9,17 @@ angular.module( 'inventoryApp' )
     }
     $scope.getWorkOrders();
 
+    $scope.deleteWorkOrder = function(workOrder){
+      woSvc.deleteWorkOrder(workOrder).then(function(res){
+        $scope.workOrders = $scope.workOrders.reduce(function(prev, cur){
+          if (cur._id != workOrder._id){
+            prev.push(cur);
+          }
+          return prev;
+        }, [])
+      });
+    }
+
     $scope.jobs = [ {
         location: 'Provo',
         name: 'Brack',

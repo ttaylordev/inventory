@@ -1,5 +1,7 @@
 <div id="jobListTmplWrap">
-  <div ng-repeat="workOrder in workOrders | orderBy : 'Date' : true" class="jobList">
+  <div ng-repeat="workOrder in workOrders | orderBy : 'date' : false" class="jobList">
+    {{workOrder}}
+    <span ng-click ="deleteWorkOrder(workOrder)"> delete </span>
     <div class="jobWrapper">
       <div class="jobLeftSideInfo">{{workOrder.date | date : 'shortDate'}}
         <br/>

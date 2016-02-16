@@ -1,17 +1,23 @@
 {
-  "name": "deployment_app",
+  "name": "merx-server",
   "version": "1.0.0",
-  "description": "deployment app",
-  "main": "./server/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-  },
-  "author": "\"Tyson Taylor\"",
-  "license": "ISC",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.14.2",
+    "body-parser": "^1.15.0",
     "cors": "^2.7.1",
     "express": "^4.13.4",
-    "mongoose": "^4.4.3"
-  }
+    "mongod": "^1.3.0",
+    "mongodb": "^2.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[C\u001b[C"
+  },
+  "author": "Tyson Taylor",
+  "license": "ISC"
 }

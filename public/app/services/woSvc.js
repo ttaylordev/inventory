@@ -42,10 +42,10 @@ angular.module( "inventoryApp" )
         } );
     };
 
-    this.deleteWorkOrder = function () {
+    this.deleteWorkOrder = function (workOrder) {
       return $http( {
           method: 'DELETE',
-          url: '/workOrder/' + id
+          url: '/workOrder/' + workOrder._id
         } )
         .then( function ( response ) {
           return response;

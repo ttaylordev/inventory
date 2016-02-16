@@ -13,7 +13,8 @@ body {
   color: rgb(242, 242, 242);
   overflow: scroll;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -239,11 +240,11 @@ alert-dir {
   background: linear-gradient(to bottom, #201f22 0%, #353542 3%, #201f22 94%, #353542 97%, #201f22 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#201f22', endColorstr='#201f22', GradientType=0);
 }
+
 .jobWrapper:active {
   position: relative;
   top: 2px;
 }
-
 
 .jobLeftSideInfo {
   flex: 1.8;
@@ -359,44 +360,71 @@ alert-dir {
   margin-top: 3px;
   margin-bottom: 3px;
 }
-#addCustBtn{
+
+#addCustBtn {
   float: right;
   margin: 0px 5px 0px 5px;
 }
+
 .customerDispWrapper {
   margin: auto;
   width: 100vw;
   padding: 2px;
   float: left;
-  font-size: .8em;
+  font-size: 1em;
 }
-
-#woWrapper{
+.customerDir{
+  flex: 1;
+  flex-grow: 1;
+}
+#woWrapper {
   padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
-#woForm {}
+.woForm {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 99vw;
+  padding: 3px 2px 3px 3px;
+  margin: 3px 0px 3px 0px;
+  bottom: 0px;
+  position: absolute;
+  max-height: calc(100vh - 275px);
+
+}
+
+.woDate {
+  max-width: 250px;
+  margin-right: 10px;
+
+}
 
 .woInput {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  width: 70vw;
+  width: 97vw;
+  height: 2em;
 }
 
 #woTextArea {
-  width: 95vw;
+  height: calc(100vh - 275px);
+  rows: 10;
 }
 
 #miniLogo {
   float: right;
-  margin-right: 2px;
+  margin-right: 3px;
   margin-bottom: 0px;
   margin-top: 0px;
   margin-left: 2px;
   padding: 0px 2px 0px 2px;
   width: 28vw;
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 200px;
+  max-height: 200px;
+  min-height: 10px;
+  min-width: 10px;
 }
 
 

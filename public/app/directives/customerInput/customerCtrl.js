@@ -1,31 +1,33 @@
 angular.module( "inventoryApp" )
   .controller( "customerCtrl", function ( customerSvc, $scope, $state, mainSvc, woSvc ) {
 
-      $scope.customerNumber = '001-000001-01';
-      $scope.state = $state;
-      $scope.workOrderNumber = '000001';
-      $scope.customers = [];
-      mainSvc.selectedCustomer = $scope.selectedCustomer;
-      $scope.selectedCustomer;
-      $scope.getCustomers = function () {
-        customerSvc.getCustomers()
-          .then( function ( response ) {
-            $scope.customers = response.data
-          } );
-      }
-      $scope.getCustomers();
+    $scope.customerNumber = '001-000001-01';
+    $scope.state = $state;
+    $scope.workOrderNumber = '000001';
+    $scope.customers = [];
+    $scope._id;
 
-      $scope.createCustomer = function ( customer ) {
-        customerSvc.createCustomer( customer )
-          .then( function ( response ) {
-            $scope.selectedCustomer.customerId = response.data._id;
-            console.log(response);
-            console.log(response.data._id);
-            $scope.getCustomers();
-          } )
-      }
+    $scope.setSelected = function(id){
+      mainSvc.setCustomerId(id);
+    }
 
-      $scope.updateCustomer = function ( id, updatedCustomer ) {
+    $scope.getCustomers = function () {
+      customerSvc.getCustomers()
+        .then( function ( response ) {
+          $scope.customers = response.data
+        } );
+    }
+    $scope.getCustomers();
+
+    $scope.createCustomer = function ( customer ) {
+      customerSvc.createCustomer( customer )
+        .then( function ( response ) {
+          $scope._id = response.data._id
+          $scope.getCustomers();
+        } )
+    }
+
+    $scope.updateCustomer = function ( id, updatedCustomer ) {
       $scope.getCustomers( id, updatedCustomer )
         .then( function ( response ) {
           $scope.getCustomers();

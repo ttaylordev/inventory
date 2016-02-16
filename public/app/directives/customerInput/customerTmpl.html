@@ -4,7 +4,10 @@
 
       <!-- dropdown of customers -->
   <select ng-show="selectCustomer" ng-options="customer.firstName for customer in customers" ng-model="selectedCustomer" ng-change="addNewCustomer=false">
+    <!-- ; setSelected(selectedCustomer._id) -->
+
     <option value="">Select Customer</option>
+
   </select>
 
       <!-- Add Customer button -->
@@ -13,16 +16,8 @@
       <!-- customer field data directive -->
   <customer-disp-dir ng-show="selectedCustomer" ng-show=""  customer="selectedCustomer"></customer-disp-dir>
 
-      <!-- customer # display -->
-  <!-- <form class="customerForm">
-    <div class="customerTopBlock">
-      <div class="numberWraper">Customer#:
-        <span id="orderNumber" ng-model="selectedCustomer.customerId">{{selectedCustomer.customerId}}</span>
-      </div>
-    </div>
-  </form> -->
 
-  <form ng-submit="createCustomer(customer)" ng-show="addNewCustomer" class="customerForm">
+  <form ng-submit="createCustomer(customer); " ng-show="addNewCustomer" class="customerForm">
 
     <div class="customerBotBlock">
       <div class="customerRightWrapper">

@@ -4,8 +4,8 @@ angular.module( "inventoryApp" )
     $scope.state = $state;
     $scope.workOrderNumber = '000001';
     $scope.workOrders = [];
-    $scope.customerId = mainSvc.getCustomerId();
 
+    console.log( $scope.customerId );
     $scope.getWorkOrders = function () {
       woSvc.getWorkOrders()
         .then( function ( response ) {
@@ -15,12 +15,10 @@ angular.module( "inventoryApp" )
     $scope.getWorkOrders();
 
     $scope.createWorkOrder = function ( workOrder ) {
-      workOrder.customerId = mainSvc.customerId;
+      workOrder.customerId = $scope.selectedCustomer._id;
       console.log(workOrder.customerId);
       woSvc.createWorkOrder( workOrder )
         .then( function ( response ) {
-          $scope.getWorkOrders();
-          $scope.workOrder = {};
         } )
     }
 
@@ -40,25 +38,27 @@ angular.module( "inventoryApp" )
 
 
 
-// #############   CUSTOMER ENDPOINTS ################# \\
+    // #############   CUSTOMER ENDPOINTS ################# \\
 
-      $scope.getCustomers = function () {
-        console.log( 'make order customerCtrl' );
-        customerSvc.getCustomers()
-          .then( function ( response ) {
-            $scope.customers = response.data
-          } ); //invoke that homie
-      }
-      $scope.getCustomers();
+    $scope.getCustomers = function () {
+      customerSvc.getCustomers()
+        .then( function ( response ) {
+          $scope.customers = response.data
+        } );
+    }
+    $scope.getCustomers();
 
-      $scope.createCustomer = function ( customer ) {
-        customerSvc.createCustomer( customer )
-          .then( function ( response ) {
-            $scope.getCustomers();
-          } )
-      }
+    $scope.createCustomer = function ( customer ) {
+      customerSvc.createCustomer( customer )
+        .then( function ( response ) {
+          $scope.selectedCustomer = response.data;
+          $scope.getCustomers();
+          $scope.customer = '';
+          $scope.addNewCustomer = !$scope.addNewCustomer;
+        } )
+    }
 
-      $scope.updateCustomer = function ( id, updatedCustomer ) {// just check to see what our service needs to have passed to it, this will help determine our arguments that we pass into our function.
+    $scope.updateCustomer = function ( id, updatedCustomer ) {
       $scope.getCustomers( id, updatedCustomer )
         .then( function ( response ) {
           $scope.getCustomers();
