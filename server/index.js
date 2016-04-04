@@ -40,7 +40,7 @@ app.get( '/schedule', jobListCtrl.readPop );
 
 
 //routing Variables
-var port = 3000;
+var port = 8082;
 var mongoURI = 'mongodb://localhost:27017/inventoryapp';
 
 //mongoDB connection
