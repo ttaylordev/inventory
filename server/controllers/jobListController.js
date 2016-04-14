@@ -1,4 +1,4 @@
-// require model
+// require models
 var WorkOrder = require( './../models/WorkOrder' );
 var Customer = require( './../models/Customer' );
 
