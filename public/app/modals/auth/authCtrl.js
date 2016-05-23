@@ -11,5 +11,5 @@ angular.module( 'inventoryApp' )
 
   } );
 
-  // can pass the user object into the close functino, or I can run it in the authCtrl
+  // can pass the user object into the close function, or I can run it in the authCtrl
 // every modal gets passed in a function called close

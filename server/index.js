@@ -17,7 +17,8 @@ app.use( bodyParser.json() );
 app.use( express.static( __dirname + './../public' ) );
 
 
-//endpoints
+// // // endpoints
+// // custon EP's
 // create
 app.post( '/customer', customerCtrl.create );
 // read
@@ -27,20 +28,18 @@ app.put( '/customer/:id', customerCtrl.update );
 // delete
 app.delete( '/customer/:id', customerCtrl.delete );
 
+// workOrder EP's
 app.post( '/workOrder', workOrderCtrl.create );
 app.get( '/workOrder', workOrderCtrl.read );
 app.put( '/workOrder/:id', workOrderCtrl.update );
 app.delete( '/workOrder/:id', workOrderCtrl.delete );
 
-
+// schedule EP, populated
 app.get( '/schedule', jobListCtrl.readPop );
 
 
-
-
-
 //routing Variables
-var port = 3000;
+var port = 8082;
 var mongoURI = 'mongodb://localhost:27017/inventoryapp';
 
 //mongoDB connection

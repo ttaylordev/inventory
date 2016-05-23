@@ -18,6 +18,15 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.mobileWrap{
+  width: 500px;
+  height: 1200px;
+  position: fixed;
+  left: calc(50vw - 250px);
+  height: calc(50vh - 600px);
+  display: block;
+}
+
 #authParent {
   width: 100vw;
   height: 100vh;
