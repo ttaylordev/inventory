@@ -18,7 +18,7 @@ app.use( express.static( __dirname + './../public' ) );
 
 
 // // // endpoints
-// // custon EP's
+// // customer EP's
 // create
 app.post( '/customer', customerCtrl.create );
 // read
