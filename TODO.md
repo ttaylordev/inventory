@@ -13,3 +13,6 @@
 
 <!-- TODO: create deployment notes in node that will log setup instructions to the console -->
 
+
+<!-- TODO: edge-case, workOrderCtrl.js:23 cannot read property '_id' of null, This happens when a customer is deselected -->
+
