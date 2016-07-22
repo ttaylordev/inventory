@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "init": "npm install",
+    "install": "npm install; bower install; gulp clean",
+    "start": "gulp clean; gulp serve-dev",
+    "test": "gulp test"
+  },
+  "paths": {
+    "client": "./src/",
+    "server": "./server/",
+    "api": "/api",
+    "data": "/../../data/",
+    "test": "./src/test/",
+    "html": "./src/**/*.html",
+    "htmltemplates": "./src/app/**/*.html",
+    "css": [
+      "./src/content/customtheme.css",
+      "./src/content/styles.css"
+    ],
+    "js": [
+      "./src/app/**/*module*.js",
+      "./src/app/**/*.js"
+    ],
+    "nodejs": [
+      "./server/**/**/*.js"
+    ],
+    "images": [
+      "./src/images/**/*"
+    ],
+    "stage": "./dist/stage/",
+    "build": "./dist/",
+    "vendorjs": [
+      "./bower_components/angular/angular.min.js",
+      "./bower_components/angular-animate/angular-animate.min.js",
+      "./bower_components/angular-route/angular-route.min.js",
+      "./bower_components/angular-sanitize/angular-sanitize.min.js",
+      "./bower_components/moment/min/moment.min.js",
+      "./bower_components/extras.angular.plus/ngplus-overlay.js",
+    ],
+    "vendorcss": []
+  }
+}
