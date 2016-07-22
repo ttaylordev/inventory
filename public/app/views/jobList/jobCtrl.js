@@ -8,9 +8,9 @@ angular.module( 'inventoryApp' )
     $scope.workOrderDetails = [];
     $scope.job = mainSvc.job;
 
-    $scope.logthisthing = function(){
-      console.log("log this thing");
-    }
+    // $scope.logthisthing = function(){
+    //   console.log("log this thing");
+    // }
     $scope.isComplete = function(wO){
       wO.isComplete = true;
       console.log(wO);
@@ -35,7 +35,7 @@ angular.module( 'inventoryApp' )
       jobSvc.getWorkOrderDetails()
         .then( function ( response ) {
           $scope.workOrderDetails = response.data;
-          console.log( $scope.workOrderDetails + ': from jobCtrl' );
+          console.log( $scope.workOrderDetails , ': from jobCtrl' );
         } );
     }
     $scope.getWorkOrderDetails();
