@@ -1,4 +1,4 @@
-/*{
+{
   "name": "inventory",
   "version": "1.0.0",
   "description": "",
@@ -10,10 +10,17 @@
     "type": "git",
     "url": "git+https://tysonTaylor@bitbucket.org/tysonTaylor/inventorymerx.git"
   },
-  "author": "",
+  "author": "Tyson Taylor",
   "license": "ISC",
   "homepage": "https://bitbucket.org/tysonTaylor/inventorymerx#readme",
   "dependencies": {
-
+    "angular-animate": "^1.5.7",
+    "angular-modal-service": "0.6.9",
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "mongod": "^1.3.0",
+    "mongodb": "^2.1.7",
+    "mongoose": "^4.4.5"
   }
-}*/
+}

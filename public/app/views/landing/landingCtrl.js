@@ -2,6 +2,7 @@ angular.module( 'inventoryApp' )
   .controller( 'landingCtrl', function ( $scope, mainSvc, ModalService ) {
 
     $scope.openLoginModal = function () {
+      console.log(ModalService);
       ModalService.showModal( {
           templateUrl: "./app/modals/auth/authTmpl.html", // points to the URL of the view
           controller: "authCtrl",

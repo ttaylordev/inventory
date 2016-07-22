@@ -23,8 +23,8 @@ angular.module( 'inventoryApp' )
     var workOrderState = {
       name: 'workOrders',
       url: '/workOrder',
-      templateUrl: './app/views/workOrder/workOrderTmpl.html',
-      controller: 'workOrderCtrl'
+      templateUrl: './app/views/workOrder/workOrderTmpl.html'
+      // controller: 'workOrderCtrl'
     };
     var completedWorkState = {
       name: 'completed',
