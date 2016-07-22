@@ -1,0 +1,105 @@
+{
+  "_args": [
+    [
+      "angular-modal-service@^0.6.9",
+      "C:\\Users\\Owner\\DevMountain\\inventory"
+    ]
+  ],
+  "_from": "angular-modal-service@>=0.6.9 <0.7.0",
+  "_id": "angular-modal-service@0.6.10",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-modal-service",
+  "_nodeVersion": "0.12.7",
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/angular-modal-service-0.6.10.tgz_1455855296989_0.9243811550550163"
+  },
+  "_npmUser": {
+    "email": "dwmkerr@gmail.com",
+    "name": "dwmkerr"
+  },
+  "_npmVersion": "2.12.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-modal-service",
+    "raw": "angular-modal-service@^0.6.9",
+    "rawSpec": "^0.6.9",
+    "scope": null,
+    "spec": ">=0.6.9 <0.7.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-modal-service/-/angular-modal-service-0.6.10.tgz",
+  "_shasum": "bf2dd94d47f2c7a4304450410eb1293725fa9f91",
+  "_shrinkwrap": null,
+  "_spec": "angular-modal-service@^0.6.9",
+  "_where": "C:\\Users\\Owner\\DevMountain\\inventory",
+  "author": {
+    "name": "Dave Kerr",
+    "url": "github.com/dwmkerr"
+  },
+  "bugs": {
+    "url": "https://github.com/dwmkerr/angular-modal-service/issues"
+  },
+  "dependencies": {},
+  "description": "AngularJS Service for showing Modals and Popups",
+  "devDependencies": {
+    "connect-livereload": "^0.5.3",
+    "coveralls": "^2.10.0",
+    "express": "^4.12.0",
+    "gulp": "^3.8.11",
+    "gulp-header": "^1.2.2",
+    "gulp-jshint": "^1.9.2",
+    "gulp-open": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "jshint-stylish": "^2.0.0",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.5.1",
+    "karma-jasmine": "~0.3",
+    "karma-junit-reporter": "~0.3",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "opn": "^3.0.1",
+    "phantomjs": "^1.9.18",
+    "tiny-lr": "^0.1.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "bf2dd94d47f2c7a4304450410eb1293725fa9f91",
+    "tarball": "https://registry.npmjs.org/angular-modal-service/-/angular-modal-service-0.6.10.tgz"
+  },
+  "gitHead": "eff9e1ab34a6693a73c63b2278926a694de8a027",
+  "homepage": "https://github.com/dwmkerr/angular-modal-service",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "modal",
+    "popup"
+  ],
+  "license": "MIT",
+  "main": "./dst/angular-modal-service.js",
+  "maintainers": [
+    {
+      "email": "dwmkerr@gmail.com",
+      "name": "dwmkerr"
+    }
+  ],
+  "name": "angular-modal-service",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dwmkerr/angular-modal-service.git"
+  },
+  "scripts": {
+    "coveralls": "cp build/coverage/PhantomJS*/lcov.info lcov.info && node node_modules/coveralls/bin/coveralls.js < lcov.info",
+    "test": "gulp test",
+    "test-debug": "karma start ./test/karma.config.js --no-single-run --browsers Chrome"
+  },
+  "version": "0.6.10"
+}

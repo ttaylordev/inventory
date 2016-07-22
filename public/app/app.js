@@ -1,1 +1,1 @@
-angular.module( 'inventoryApp', [ 'ui.router', 'angularModalService' ] )
+angular.module( 'inventoryApp', [ 'ui.router', 'ngAnimate', 'angularModalService' ] )

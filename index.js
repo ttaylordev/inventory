@@ -5,16 +5,16 @@ var bodyParser = require( 'body-parser' );
 var mongoose = require( 'mongoose' );
 
 // Controllers
-var customerCtrl = require( './controllers/customerController' );
-var workOrderCtrl = require('./controllers/workOrderController');
-var jobListCtrl = require('./controllers/jobListController');
+var customerCtrl = require( './server/controllers/customerController' );
+var workOrderCtrl = require('./server/controllers/workOrderController');
+var jobListCtrl = require('./server/controllers/jobListController');
 //initialize app
 var app = express();
 
 //initialize dependencies
 app.use( cors() );
 app.use( bodyParser.json() );
-app.use( express.static( __dirname + './../public' ) );
+app.use( express.static( __dirname + '/public' ) );
 
 
 // // // endpoints
