@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+@import "temporary";
+* {
+  /*outline: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $color-dark;
+  font-family: trebuchet monospace;
+  color: $color-pale;
+  overflow: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#backgroundImage {
+  width: 200px;
+}
+#fadedBackground {
+  opacity: 0.6;
+  /*margin: auto;*/
+  margin-left: calc(0vw - 33px);
+  width: 72px;
+}
+#centerBackGround {
+  justify-content: center;
+  margin: auto;
+  width: 200px;
+}
