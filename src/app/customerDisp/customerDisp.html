@@ -1,0 +1,34 @@
+<div class="customerDispWrapper">
+  <img id="miniLogo" src="./media/miniLogo.png"/>
+  <div ng-model="cDispObj" class="perCustomerWrapper">
+
+        <!-- {{customerDisp[0]}} -->
+    <p>ID:
+      {{customer._id}}</p>
+    <span ng-if="customer.lastName">{{customer.lastName}},</span>
+    <span ng-if="customer.firstName">{{customer.firstName}}</span>
+    <p ng-if="customer.email">{{customer.email}}</p>
+    <p ng-if="customer.address">{{customer.address}}</p>
+    <p ng-if="customer.zip">{{customer.zip}}</p>
+    <span ng-if="customer.city">{{customer.city}},
+    </span>
+    <span ng-if="customer.state">{{customer.state}}</span>
+    <p ng-if="customer.warrantyStatus">WarrantyStatus:
+      {{customer.warrantyStatus}}</p>
+    <br>
+  </div>
+</div>
+<!-- customerDisp on parent controller -->
+
+<!-- TODO: one query from mainSvc, to retrieve customer info and WOinfo at the same time. -->
+
+<!-- probably will not want an ng-repeat here, but it was great practice.
+ -->
+<!-- NOTE: only display one customer per PO/ WO -->
+<!-- Inputs -->
+<!-- <div class="addInventoryToPoBtn" ng-click="NOTE: bring up the swap dir, "> -->
+
+<!-- Display Outputs -->
+<!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
+<!-- TODO: attach current user as the technician name -->
+<!-- TODO: itemized charges NOTE: should allow editing for certain users-->

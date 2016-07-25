@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "angular-animate": "^1.5.7",
-    "angular-modal-service": "0.6.9",
+    "angular-modal-service": "^0.6.9",
     "body-parser": "^1.15.0",
     "compression": "^1.0.1",
     "cors": "^2.7.1",

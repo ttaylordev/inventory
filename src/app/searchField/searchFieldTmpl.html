@@ -1,0 +1,13 @@
+<div ng-controller="searchFieldCtrl">
+  <select ng-options="thing as thing.label for thing in things track by thing.id" ng-model="selected"></select>
+  <!-- <span ui-sref="{{things.label}}"></span> -->
+  <!-- <div style="width:200px; height: 200px; background-color:purple;"> -->
+    <div>
+      {{things[0].subItem.name}}
+    </div>
+    <div>
+      {{things[1].subItem.name}}
+    <!-- </div> -->
+    <!-- practicing how to access the nexted objects within the array -->
+  </div>
+</div>

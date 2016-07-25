@@ -1,0 +1,55 @@
+<div id="customerTmplWrap">
+  <!-- select Customer button -->
+  <div id="customerTopBtnWrapper">
+
+    <button class="custTopBtn" ng-hide="selectCustomer" ng-click="selectCustomer = !selectCustomer;addNewCustomer=false" type="button" name="button">Select Customer</button>
+
+    <!-- dropdown of customers -->
+    <select class="custTopBtn" ng-show="selectCustomer" ng-options="customer.firstName for customer in customers" ng-model="selectedCustomer" ng-change="addNewCustomer=false; setCustIdToWorkOrder();">
+
+
+      <option value="">Select Customer</option>
+
+    </select>
+
+    <!-- Add Customer button -->
+    <button class="custTopBtn" ng-click="addNewCustomer = !addNewCustomer; selectedCustomer = ''" id="addCustBtn" type="button" name="button">Add New Customer</button>
+  </div>
+  <!-- customer field data directive -->
+  <customer-disp-dir ng-show="selectedCustomer" customer="selectedCustomer"></customer-disp-dir>
+
+  <form ng-submit="createCustomer(customer);" ng-show="addNewCustomer" class="customerForm">
+
+    <div class="customerBotBlock">
+      <div class="customerRightWrapper">
+        <img id="miniLogo" src="./media/miniLogo.png" />
+        <div class="radioWrapper">
+          Warranty:
+          <br/> Yes
+          <input class="radio" name="warranty" type="radio" value="yes" name="warrantyYes"> No
+          <input class="radio" name="warranty" type="radio" value="no" name="warrantyNo">
+        </div>
+      </div>
+
+      <div class="customerLeftBlock">
+
+        <!-- customer main inputs -->
+        <input ng-model="customer.firstName" class="customerInput" type="text" name="firstName" required placeholder="First Name">
+        <input ng-model="customer.lastName" class="customerInput" type="text" name="lastName" required placeholder="Last Name">
+        <input ng-model="customer.email" class="customerInput" type="text" name="email" placeholder="Email">
+        <input ng-model="customer.phone" class="customerInput" type="text" name="phoneNumber" required placeholder="Phone Number">
+        <input ng-model="customer.address" class="customerInput" type="text" name="address" required placeholder="Address">
+        <input ng-model="customer.zip" class="customerInput" type="text" name="zip" required placeholder="Zip">
+        <input ng-model="customer.city" class="customerInput" type="text" name="city" required placeholder="City">
+        <input ng-model="customer.state" class="customerInput" type="text" name="state" required placeholder="State">
+        <button type="submit" name="button">Submit</button>
+      </div>
+    </div>
+  </form>
+  <hr class="hr">
+</div>
+
+<!-- Display Outputs -->
+<!-- TODO: generate a customer service number, should reflect how many times that customer has been serviced -->
+<!-- TODO: attach current user as the technician name -->
+<!-- TODO: itemized charges NOTE: should allow editing for certain users-->
