@@ -4,5 +4,5 @@ angular.module('inventoryApp')
       templateUrl: './app/swap/swap.html',
       controller: 'swapCtrl',
       restrict: 'E'
-    }
+    };
   });

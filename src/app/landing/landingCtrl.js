@@ -18,5 +18,5 @@ angular.module('inventoryApp')
             console.log(then); // logs user to the console
           });
         });
-    }
+    };
   }]);

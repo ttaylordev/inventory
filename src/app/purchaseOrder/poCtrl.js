@@ -5,7 +5,7 @@ angular.module('inventoryApp')
     $scope.workOrdersArray = [];
     $scope.workOrders = [];
     $scope.workOrder = {};
-    $scope.selectedCustomer;
+    $scope.selectedCustomer = null;
     $scope.workOrderDetails = [];
     $scope.job = mainSvc.job;
 
@@ -14,7 +14,7 @@ angular.module('inventoryApp')
       $scope.workOrder.customerId = $scope.selectedCustomer._id;
       console.log($scope.workOrder.customerId);
       console.log($scope.selectedCustomer.firstName);
-    }
+    };
 
     $scope.getWorkOrderDetails = function () {
       jobSvc.getWorkOrderDetails()
@@ -22,7 +22,7 @@ angular.module('inventoryApp')
           $scope.workOrderDetails = response.data;
           console.log($scope.workOrderDetails + ': from poCtrl');
         });
-    }
+    };
     $scope.getWorkOrderDetails();
 
     $scope.getWorkOrders = function () {
@@ -30,8 +30,8 @@ angular.module('inventoryApp')
         .then(function (response) {
           $scope.workOrders = response.data;
         });
-    }
+    };
     $scope.getWorkOrders();
 
-    $scope.customerDisp = []
+    $scope.customerDisp = [];
   }]);

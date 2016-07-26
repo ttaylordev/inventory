@@ -5,6 +5,6 @@ angular.module('inventoryApp')
       templateUrl: './app/navMenu/navMenuTmpl.html',
       controller: 'navMenuCtrl',
       restrict: 'E'
-    }
+    };
     //not a route, looks similar, but it's not changing the page
   });

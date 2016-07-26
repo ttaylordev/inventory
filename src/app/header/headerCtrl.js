@@ -1,7 +1,7 @@
-angular.module("inventoryApp")
-  .controller("headerCtrl", ['$scope', '$state', function ($scope, $state) {
+angular.module('inventoryApp')
+  .controller('headerCtrl', ['$scope', '$state', function ($scope, $state) {
     $scope.state = $state;
-    $scope.test = "this is a test";
+    $scope.test = 'this is a test';
   }]);
 // can get id's with stateParams,
 

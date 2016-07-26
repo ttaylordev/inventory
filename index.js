@@ -41,7 +41,7 @@ switch (environment) {
         app.use('/', express.static(pkg.paths.client, {maxAge: day}));
         app.use('/', express.static('./'));
         break;
-};
+}
 
 app.get('/ping', function(req, res, next) {
     console.log(req.body);
@@ -57,7 +57,7 @@ mongoose.set('debug', true);
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', function () {
   console.log('Connected to mongo at: ', mongoURI);
-})
+});
 
 // app listen
 app.listen(port, function () {

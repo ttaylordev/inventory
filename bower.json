@@ -1,0 +1,27 @@
+{
+  "name": "merx-work-orders",
+  "version": "0.0.5",
+  "description": "A work-order deployment application for service-based businesses",
+  "authors": [
+    "Tyson Taylor"
+  ],
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/tysonTaylor/inventorymerx#readme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular": "1.5.9"
+  },
+  "dependencies": {
+    "angular": "~1.5.9",
+    "angular-animate": "~1.3.0",
+    "angular-sanitize": "~1.3.0",
+    "angular-ui-router": "^0.3.1",
+    "moment": "~2.8.1",
+    "toastr": "~2.0.3"
+}

@@ -4,5 +4,5 @@ angular.module('inventoryApp')
       templateUrl: './app/searchField/searchFieldTmpl.html',
       controller: 'searchFieldCtrl',
       restrict: 'AE'
-    }
+    };
   });

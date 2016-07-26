@@ -1,5 +1,5 @@
-angular.module("inventoryApp")
-  .service("woSvc", ['$http', function ($http) {
+angular.module('inventoryApp')
+  .service('woSvc', ['$http', function ($http) {
 
 
     this.getWorkOrders = function () {
@@ -35,7 +35,7 @@ angular.module("inventoryApp")
     this.editWorkOrder = function (id, workOrder) {
       return $http({
           method: 'PUT',
-          url: "/workOrder/" + id,
+          url: '/workOrder/' + id,
           data: workOrder
         })
         .then(function (response) {

@@ -1,45 +1,45 @@
-angular.module("inventoryApp")
-  .controller("customerCtrl", ['customerSvc', '$scope', '$state', 'mainSvc', 'woSvc', function (customerSvc, $scope, $state, mainSvc, woSvc) {
+angular.module('inventoryApp')
+  .controller('customerCtrl', ['customerSvc', '$scope', '$state', 'mainSvc', 'woSvc', function (customerSvc, $scope, $state, mainSvc, woSvc) {
 
     $scope.customerNumber = '001-000001-01';
     $scope.state = $state;
     $scope.workOrderNumber = '000001';
     $scope.customers = [];
-    $scope._id;
+    $scope._id = null;
 
     $scope.setSelected = function (id) {
       mainSvc.setCustomerId(id);
-    }
+    };
 
     $scope.getCustomers = function () {
       customerSvc.getCustomers()
         .then(function (response) {
-          $scope.customers = response.data
+          $scope.customers = response.data;
         });
-    }
+    };
     $scope.getCustomers();
 
     $scope.createCustomer = function (customer) {
       customerSvc.createCustomer(customer)
         .then(function (response) {
-          $scope._id = response.data._id
+          $scope._id = response.data._id;
           $scope.getCustomers();
-        })
-    }
+        });
+    };
 
     $scope.updateCustomer = function (id, updatedCustomer) {
       $scope.getCustomers(id, updatedCustomer)
         .then(function (response) {
           $scope.getCustomers();
         });
-    }
+    };
 
     $scope.deleteCustomer = function (id) {
       customerSvc.deleteCustomer(id)
         .then(function (response) {
           $scope.getCustomers();
-        })
-    }
+        });
+    };
 
   }]);
 

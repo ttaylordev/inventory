@@ -1,5 +1,5 @@
-angular.module("inventoryApp")
-  .service("jobSvc", ['$http', function ($http) {
+angular.module('inventoryApp')
+  .service('jobSvc', ['$http', function ($http) {
 
     this.getWorkOrderDetails = function () {
       return $http({

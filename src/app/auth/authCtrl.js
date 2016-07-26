@@ -4,8 +4,8 @@ angular.module('inventoryApp')
     $scope.close = close;
     $scope.key = key;
     $scope.login = function (user) {
-      user.email
-      user.password
+      user.email = null;
+      user.password = null;
       $scope.close(key);
     };
 

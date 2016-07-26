@@ -4,7 +4,7 @@ angular.module('inventoryApp')
     $scope.state = $state;
     $scope.workOrders = [];
     $scope.workOrder = {};
-    $scope.selectedCustomer;
+    $scope.selectedCustomer = null;
     // Modal Service		
     $scope.openConfirmationModal = function () {
       ModalService.showModal({
@@ -30,7 +30,7 @@ angular.module('inventoryApp')
     $scope.getWorkOrders = function () {
       woSvc.getWorkOrders()
         .then(function (response) {
-          $scope.workOrders = response.data
+          $scope.workOrders = response.data;
           console.log($scope.workOrders);
         });
     };
@@ -55,6 +55,6 @@ angular.module('inventoryApp')
       woSvc.deleteWorkOrder(id)
         .then(function (response) {
           $scope.getWorkOrders();
-        })
+        });
     };
   }]);

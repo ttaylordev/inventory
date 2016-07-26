@@ -4,7 +4,7 @@ angular.module('inventoryApp')
     $scope.workOrdersArray = [];
     $scope.workOrders = [];
     $scope.workOrder = {};
-    $scope.selectedCustomer;
+    $scope.selectedCustomer = null;
     $scope.workOrderDetails = [];
     $scope.job = mainSvc.job;
 
@@ -15,21 +15,21 @@ angular.module('inventoryApp')
       wO.isComplete = true;
       console.log(wO);
       $scope.updateWorkOrder(wO._id, wO);
-    }
+    };
 
     // called from customerTmpl.html to give workOrder an associated customerId.\\
     $scope.setCustIdToWorkOrder = function () {
-        $scope.workOrder.customerId = $scope.selectedCustomer._id;
-        // console.log( $scope.workOrder.customerId );
-        // console.log( $scope.selectedCustomer.firstName );
-      }
-      // new section
+      $scope.workOrder.customerId = $scope.selectedCustomer._id;
+      // console.log( $scope.workOrder.customerId );
+      // console.log( $scope.selectedCustomer.firstName );
+    };
+    // new section
     $scope.updateWorkOrder = function (id, updatedWorkOrder) {
       woSvc.editWorkOrder(id, updatedWorkOrder)
         .then(function (response) {
           $scope.getWorkOrders();
         });
-    }
+    };
 
     $scope.getWorkOrderDetails = function () {
       jobSvc.getWorkOrderDetails()
@@ -37,7 +37,7 @@ angular.module('inventoryApp')
           $scope.workOrderDetails = response.data;
           console.log($scope.workOrderDetails, ': from jobCtrl');
         });
-    }
+    };
     $scope.getWorkOrderDetails();
 
     $scope.getWorkOrders = function () {
@@ -45,7 +45,7 @@ angular.module('inventoryApp')
         .then(function (response) {
           $scope.workOrders = response.data;
         });
-    }
+    };
     $scope.getWorkOrders();
 
   }]);

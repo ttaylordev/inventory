@@ -1,11 +1,11 @@
-angular.module( "inventoryApp" )
-  .directive( "headerDir", function () {
+angular.module('inventoryApp')
+  .directive('headerDir', function () {
     return {
       templateUrl: './app/header/headerTmpl.html',
       controller: 'headerCtrl',
       restrict: 'E'
-    }
-  } );
+    };
+  });
 // directives get their own template files, same with routes
 // directives don't replace your router
 //
